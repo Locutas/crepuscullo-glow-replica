@@ -16,6 +16,7 @@ const Valorant = () => {
     { name: "Intermediaria", code: "0;s;1;P;h;0;0t;3;0l;0;0v;4;0g;1;0o;1;0a;0.707;0f;0;1t;1;1l;6;1v;3;1g;1;1o;2;1a;1;1m;0;1f;0;S;c;5;s;0.542;o;1", imageUrl: "https://i.imgur.com/tZtMHhG.png" },
     { name: "Cruz Fina PQN", code: "0;s;1;P;o;0;f;0;0b;0;1t;1;1o;1;1a;1;1m;0;1f;0", imageUrl: "https://i.imgur.com/0SNBObJ.png" },
     { name: "Cruz 1080", code: "0;c;1;s;1;P;h;0;m;1;0t;3;0l;0;0v;3;0g;1;0o;0;0a;0.626;0f;0;1t;1;1l;4;1g;1;1o;1;1a;1;1m;0;1f;0;S;c;0;s;0.616;o;1", imageUrl: "https://i.imgur.com/uTRrfKj.png" },
+    { name: "1080 Média", code: "0;p;0;c;1;s;1;P;u;000000FF;h;0;f;0;m;1;0t;3;0l;0;0v;3;0g;1;0o;1;0a;1;0f;0;1t;1;1l;4;1g;1;1o;1;1a;1;1m;0;1f;0;A;h;0;0l;5;0v;5;0o;0;0a;1;0f;0;1b;0;S;b;1;c;8;t;000000FF;s;0.787;o;1", imageUrl: "https://i.imgur.com/wwCBAdJ.png" },
     { name: "Ponto Pituco", code: "0;s;1;P;c;5;o;1;d;1;z;1;0t;1;0l;1;0o;0;0a;0;0f;0;1b;0;S;c;0;s;0.603;o;0.655", imageUrl: "https://i.imgur.com/gjKrL2m.png" },
     { name: "Ponticão", code: "0;s;1;P;o;1;d;1;z;3;a;0.934;0t;1;0l;2;0o;0;0a;1;0f;0;1b;0;S;c;0;s;1.214;o;0.856", imageUrl: "https://i.imgur.com/dCRZ8El.png" },
     { name: "Cruz Normal", code: "0;P;h;0;f;0;0l;5;0o;2;0a;1;0f;0;1b;0", imageUrl: "https://i.imgur.com/L3UBYu0.png" },
