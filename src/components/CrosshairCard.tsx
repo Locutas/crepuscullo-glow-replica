@@ -22,19 +22,19 @@ const CrosshairCard = ({ name, code, imageUrl }: CrosshairProps) => {
   };
 
   return (
-    <div className="bg-white/[0.03] border border-transparent rounded-[16px] p-4 transition-all duration-300 ease-out hover:bg-white/[0.06] hover:border-primary/40 group">
-      <div className="aspect-video bg-black/40 rounded-lg overflow-hidden mb-4 flex items-center justify-center relative">
+    <div className="bg-white/[0.03] border border-transparent rounded-[16px] p-4 transition-all duration-300 ease-out hover:bg-white/[0.06] hover:border-primary/40 group flex flex-col h-full">
+      <div className="aspect-square bg-black/40 rounded-lg overflow-hidden mb-4 flex items-center justify-center relative p-4">
         <img 
           src={imageUrl} 
           alt={`Mira ${name}`}
-          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
+          className="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-125"
         />
         <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3 mt-auto">
         <div className="flex items-center justify-between">
-          <h3 className="text-white text-[13px] font-bold uppercase tracking-widest group-hover:text-primary/90 transition-colors">
+          <h3 className="text-white text-[12px] font-bold uppercase tracking-widest group-hover:text-primary/90 transition-colors truncate">
             {name}
           </h3>
         </div>
@@ -51,7 +51,7 @@ const CrosshairCard = ({ name, code, imageUrl }: CrosshairProps) => {
           ) : (
             <>
               <Copy className="w-3.5 h-3.5" />
-              <span className="truncate max-w-[150px]">Copiar Código</span>
+              <span>Copiar</span>
             </>
           )}
         </button>
