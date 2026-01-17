@@ -26,6 +26,21 @@
     font-family: 'Inter', sans-serif;
   }
 
+  /* Barra de Rolagem Vermelha */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050505;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #ff4655;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e63e4c;
+  }
+
   img {
     pointer-events: none;
   }
@@ -109,7 +124,7 @@
   border-color: rgba(255, 70, 85, 0.3);
 }
 
-/* Cursor Customizado - Cruz Vermelha Menor */
+/* Cursor Customizado - Cruz Vermelha */
 .custom-cursor {
   width: 14px;
   height: 14px;
@@ -125,7 +140,8 @@
 .custom-cursor::after {
   content: '';
   position: absolute;
-  background-color: #ff4655;
+  background-color: #ff4655; /* Cor vermelha vibrante */
+  box-shadow: 0 0 5px rgba(255, 70, 85, 0.8); /* Glow na retícula */
 }
 
 /* Linha Horizontal */
