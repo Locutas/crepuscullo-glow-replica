@@ -1,8 +1,5 @@
 import valorantLogo from '@/assets/valorant-logo.png';
 import rankDiamond from '@/assets/rank-diamond.png';
-import reynaImg from '@/assets/reyna.png';
-import jettImg from '@/assets/jett.png';
-import sovaImg from '@/assets/sova.png';
 
 interface Agent {
   name: string;
@@ -11,9 +8,18 @@ interface Agent {
 
 const ValorantStats = () => {
   const agents: Agent[] = [
-    { name: 'Reyna', imageUrl: reynaImg },
-    { name: 'Jett', imageUrl: jettImg },
-    { name: 'Sova', imageUrl: sovaImg },
+    { 
+      name: 'Killjoy', 
+      imageUrl: 'https://media.valorant-api.com/agents/1e58de9d-4950-5125-93e9-a0aee9f98746/displayicon.png' 
+    },
+    { 
+      name: 'Sage', 
+      imageUrl: 'https://media.valorant-api.com/agents/569fdd95-4d10-4c10-85a1-c8733471f0ad/displayicon.png' 
+    },
+    { 
+      name: 'Cypher', 
+      imageUrl: 'https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-00ad6e383de8/displayicon.png' 
+    },
   ];
 
   return (
