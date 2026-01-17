@@ -10,14 +10,14 @@ interface AvatarProps {
 const Avatar = ({ imageUrl, alt }: AvatarProps) => {
   return (
     <div className="relative w-56 h-56 mx-auto mb-10 flex items-center justify-center">
-      {/* Brilho de Fundo (Glow Ambiental) */}
-      <div className="absolute w-48 h-48 bg-primary/20 blur-[60px] rounded-full pointer-events-none" />
+      {/* Brilho de Fundo mais difuso */}
+      <div className="absolute w-48 h-48 bg-primary/10 blur-[80px] rounded-full pointer-events-none" />
       
-      {/* Borda Vermelha Vibrante com Brilho */}
-      <div className="relative w-44 h-44 rounded-full border-[3px] border-primary bg-black/20 flex items-center justify-center overflow-visible shadow-[0_0_25px_rgba(255,70,85,0.4)]">
+      {/* Borda mais fina e brilho mais suave */}
+      <div className="relative w-44 h-44 rounded-full border border-primary/40 bg-black/40 backdrop-blur-sm flex items-center justify-center overflow-visible shadow-[0_0_30px_rgba(255,70,85,0.2)] transition-all duration-500 hover:border-primary/60 hover:shadow-[0_0_40px_rgba(255,70,85,0.3)]">
         
         {/* Imagem que Flutua */}
-        <div className="w-[99%] h-[99%] rounded-full overflow-hidden animate-float">
+        <div className="w-[96%] h-[96%] rounded-full overflow-hidden animate-float">
           <img 
             src={imageUrl} 
             alt={alt}
@@ -27,7 +27,7 @@ const Avatar = ({ imageUrl, alt }: AvatarProps) => {
       </div>
 
       {/* Sombra dinâmica abaixo do avatar */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-24 h-5 bg-black/80 blur-xl rounded-[100%] animate-shadow" />
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-20 h-4 bg-black/60 blur-xl rounded-[100%] animate-shadow" />
     </div>
   );
 };
