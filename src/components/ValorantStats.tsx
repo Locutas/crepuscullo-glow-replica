@@ -17,33 +17,35 @@ const ValorantStats = () => {
   ];
 
   return (
-    <div className="w-full max-w-2xl mx-auto mt-12">
-      <div className="bg-card/40 backdrop-blur-sm border border-border/30 rounded-2xl p-6">
+    <div className="w-full max-w-2xl mx-auto mt-14">
+      <div className="setup-card p-6">
+        {/* Header */}
         <div className="flex items-center justify-center gap-2 mb-6">
           <img src={valorantLogo} alt="Valorant" className="w-5 h-5 object-contain" />
           <h3 className="text-base font-semibold text-foreground">Valorant Stats</h3>
         </div>
         
-        <div className="grid grid-cols-4 gap-3">
+        {/* Stats Grid */}
+        <div className="grid grid-cols-4 gap-4">
           {/* Peak Rate */}
-          <div className="bg-secondary/40 rounded-xl p-4 flex flex-col items-center justify-center border border-border/30 card-hover">
-            <div className="w-12 h-12 flex items-center justify-center mb-2">
+          <div className="bg-secondary rounded-xl p-5 flex flex-col items-center justify-center">
+            <div className="w-14 h-14 flex items-center justify-center mb-2">
               <img 
                 src={rankDiamond} 
                 alt="Diamond Rank"
-                className="w-10 h-10 object-contain"
+                className="w-12 h-12 object-contain"
               />
             </div>
-            <span className="text-xs text-muted-foreground text-center">Peak Rate</span>
+            <span className="text-xs text-muted-foreground">Peak Rate</span>
           </div>
 
           {/* Agents */}
           {agents.map((agent, index) => (
             <div 
               key={index}
-              className="bg-secondary/40 rounded-xl p-4 flex flex-col items-center justify-center border border-border/30 card-hover"
+              className="bg-secondary rounded-xl p-5 flex flex-col items-center justify-center"
             >
-              <div className="w-12 h-12 rounded-full overflow-hidden mb-2 bg-muted/30">
+              <div className="w-14 h-14 rounded-full overflow-hidden mb-2">
                 <img 
                   src={agent.imageUrl} 
                   alt={agent.name}

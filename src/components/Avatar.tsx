@@ -5,8 +5,10 @@ interface AvatarProps {
 
 const Avatar = ({ imageUrl, alt }: AvatarProps) => {
   return (
-    <div className="relative w-36 h-36 mx-auto mb-6">
-      <div className="absolute inset-0 rounded-full bg-primary/30 blur-2xl scale-125" />
+    <div className="relative w-40 h-40 mx-auto mb-8">
+      {/* Glow effect */}
+      <div className="absolute inset-0 rounded-full bg-primary/40 blur-3xl scale-150" />
+      {/* Avatar image */}
       <div className="relative w-full h-full rounded-full overflow-hidden glow-red">
         <img 
           src={imageUrl} 
