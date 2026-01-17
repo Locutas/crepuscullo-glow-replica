@@ -73,7 +73,7 @@ const Setup = () => {
               SETUP
             </h1>
             <p className="text-white/50 text-[13px] uppercase tracking-[3px] font-medium whitespace-nowrap">
-              Os equipamentos que uso para jogar e fazer as lives
+              Equipamentos que uso para jogar e fazer as lives
             </p>
           </div>
 
