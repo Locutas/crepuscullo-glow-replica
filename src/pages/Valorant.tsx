@@ -2,7 +2,6 @@ import Header from '@/components/Header';
 import FallingPetals from '@/components/FallingPetals';
 import AudioPlayer from '@/components/AudioPlayer';
 import ValorantStats from '@/components/ValorantStats';
-import valorantLogo from '@/assets/valorant-logo.png';
 
 const Valorant = () => {
   return (
@@ -13,7 +12,7 @@ const Valorant = () => {
       <main className="relative z-10 pt-52 pb-24 px-6">
         <div className="max-w-5xl mx-auto">
           
-          {/* Hero Section - Mesmo estilo do Setup */}
+          {/* Hero Section - Estilo Setup com novos dados */}
           <div className="flex flex-col items-center text-center mb-16 page-transition">
             <div className="relative w-40 h-40 mb-6 flex items-center justify-center">
               {/* Brilhos de fundo */}
@@ -21,9 +20,9 @@ const Valorant = () => {
               <div className="absolute w-20 h-20 bg-primary/30 blur-[25px] rounded-full pointer-events-none" />
               
               <img 
-                src={valorantLogo} 
+                src="https://i.imgur.com/GAgHYgx.png" 
                 alt="Valorant Icon" 
-                className="relative w-24 h-24 object-contain animate-float z-10 brightness-125"
+                className="relative w-32 h-32 object-contain animate-float z-10"
               />
               
               {/* Sombra dinâmica */}
@@ -34,7 +33,7 @@ const Valorant = () => {
               VALORANT
             </h1>
             <p className="text-white/50 text-[13px] uppercase tracking-[3px] font-medium max-w-lg mx-auto leading-relaxed">
-              Minha jornada tática, agentes favoritos e estatísticas competitivas
+              O que você precisa está aqui
             </p>
           </div>
 
