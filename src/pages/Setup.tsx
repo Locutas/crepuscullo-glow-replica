@@ -56,31 +56,50 @@ const Setup = () => {
       <FallingPetals />
       <Header />
       
-      <main className="relative z-10 pt-32 pb-24 px-6">
-        <div className="max-w-5xl mx-auto space-y-8">
+      <main className="relative z-10 pt-52 pb-24 px-6">
+        <div className="max-w-5xl mx-auto space-y-12">
+          
+          {/* Hero Section do Setup */}
+          <div className="flex flex-col items-center text-center mb-16 page-transition">
+            <div className="relative w-48 h-48 mb-8">
+              <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-pulse" />
+              <img 
+                src="https://i.imgur.com/cPvNAwl.png" 
+                alt="Setup Icon" 
+                className="relative w-full h-full object-contain animate-float"
+              />
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-[10px] uppercase font-space">
+              SETUP
+            </h1>
+            <p className="text-white/50 text-[14px] uppercase tracking-[3px] font-medium max-w-md">
+              Os equipamentos que uso para jogar e fazer as lives
+            </p>
+          </div>
+
           {setupSections.map((section, idx) => (
             <div 
               key={idx} 
               className="bg-[#080808] border border-white/[0.05] rounded-[20px] p-6 md:p-8 page-transition"
             >
-              {/* Header da Seção Reduzido */}
+              {/* Header da Seção */}
               <div className="flex items-center gap-3 mb-8">
                 <div className="text-white/80">
                   {section.icon}
                 </div>
-                <h2 className="text-lg font-bold text-white tracking-widest">
+                <h2 className="text-lg font-bold text-white tracking-widest uppercase">
                   {section.category}
                 </h2>
               </div>
 
-              {/* Grid de Itens Mais Compacto */}
+              {/* Grid de Itens */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {section.items.map((item, itemIdx) => (
                   <div 
                     key={itemIdx} 
                     className="bg-[#0f0f0f] border border-white/[0.03] rounded-[16px] p-4 transition-all duration-300 hover:border-white/10 hover:bg-[#121212] group"
                   >
-                    {/* Imagem do Produto Menor */}
+                    {/* Imagem do Produto */}
                     <div className="aspect-[16/9] bg-black/40 rounded-lg overflow-hidden mb-4 flex items-center justify-center border border-white/[0.02]">
                       {item.image ? (
                         <img 
@@ -93,7 +112,7 @@ const Setup = () => {
                       )}
                     </div>
 
-                    {/* Conteúdo Info Reduzido */}
+                    {/* Conteúdo Info */}
                     <div className="space-y-1">
                       <div className="flex items-center justify-between gap-2">
                         <h3 className="text-white text-[14px] font-bold truncate">
@@ -105,7 +124,7 @@ const Setup = () => {
                           </span>
                         )}
                       </div>
-                      <p className="text-white/30 text-[12px] leading-relaxed line-clamp-1">
+                      <p className="text-white/30 text-[12px] leading-relaxed line-clamp-1 uppercase tracking-wider">
                         {item.spec}
                       </p>
                     </div>
