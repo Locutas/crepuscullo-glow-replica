@@ -10,24 +10,20 @@ interface AvatarProps {
 const Avatar = ({ imageUrl, alt }: AvatarProps) => {
   return (
     <div className="relative w-56 h-56 mx-auto mb-10 flex items-center justify-center">
-      {/* 1. Elemento de Fundo Estático (A borda fixa com brilho) */}
-      <div className="absolute w-40 h-40 rounded-full border-2 border-primary/60 bg-black/20 backdrop-blur-sm shadow-[0_0_50px_rgba(255,70,85,0.3)] flex items-center justify-center">
-        {/* Glow interno da borda */}
-        <div className="absolute inset-0 rounded-full shadow-[inset_0_0_20px_rgba(255,70,85,0.2)]" />
-      </div>
+      {/* Brilho Ambiental Suave */}
+      <div className="absolute w-40 h-40 bg-primary/10 blur-[60px] rounded-full pointer-events-none" />
+      <div className="absolute w-20 h-20 bg-primary/20 blur-[30px] rounded-full pointer-events-none" />
 
-      {/* 2. Avatar Flutuante (Sem borda própria) */}
+      {/* Avatar Flutuante (Sem borda circular rígida) */}
       <div className="relative w-44 h-44 animate-float z-10 flex items-center justify-center">
-        <div className="w-40 h-40 rounded-full overflow-hidden">
-          <img 
-            src={imageUrl} 
-            alt={alt}
-            className="w-full h-full object-cover rounded-full"
-          />
-        </div>
+        <img 
+          src={imageUrl} 
+          alt={alt}
+          className="w-full h-full object-contain"
+        />
       </div>
 
-      {/* 3. Sombra dinâmica projetada na borda de fundo */}
+      {/* Sombra dinâmica projetada no fundo */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-24 h-6 bg-black/60 blur-xl rounded-[100%] animate-shadow" />
     </div>
   );
