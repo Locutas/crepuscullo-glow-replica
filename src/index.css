@@ -46,10 +46,29 @@
 }
 
 @keyframes fall {
-  0% { transform: translateY(-50px) rotate(0deg) translateX(0); opacity: 0; }
-  10% { opacity: 0.8; }
-  90% { opacity: 0.8; }
-  100% { transform: translateY(110vh) rotate(720deg) translateX(100px); opacity: 0; }
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(105vh) translateX(100px) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes sway {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px);
+  }
 }
 
 @keyframes float {
@@ -67,11 +86,11 @@
 
 .petal {
   position: absolute;
-  background: linear-gradient(135deg, hsl(358 100% 62%), hsl(358 100% 40%));
-  border-radius: 100% 0 100% 0;
-  animation: fall linear forwards;
   pointer-events: none;
   z-index: 0;
+  border-radius: 100% 0 100% 0;
+  filter: blur(0.5px);
+  will-change: transform, opacity;
 }
 
 /* Glassmorphism Refinado */
