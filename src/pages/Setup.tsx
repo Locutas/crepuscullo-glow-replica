@@ -61,14 +61,14 @@ const Setup = () => {
       <main className="relative z-10 pt-44 pb-32 px-6 md:px-12 lg:px-20">
         <div className="max-w-[1100px] mx-auto">
           {/* Título Principal */}
-          <div className="text-center mb-24">
+          <div className="text-center mb-20">
             <h1 className="text-5xl md:text-7xl font-bold text-white tracking-[20px] md:tracking-[30px] uppercase font-space mb-6 ml-[20px] md:ml-[30px]">
               SETUP
             </h1>
             <div className="w-20 h-[3px] bg-primary mx-auto rounded-full shadow-[0_0_15px_rgba(255,70,85,0.5)]" />
           </div>
 
-          <div className="space-y-24">
+          <div className="space-y-20">
             {setupSections.map((section, idx) => (
               <section key={idx} className="page-transition">
                 {/* Cabeçalho da Seção */}
@@ -81,30 +81,30 @@ const Setup = () => {
                   </h2>
                 </div>
                 
-                {/* Grid de Cards - Ajustado para ser mais compacto */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {/* Grid de Cards compactos */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                   {section.items.map((item, itemIdx) => (
                     <div 
                       key={itemIdx} 
-                      className="group flex flex-col bg-[#080808] border border-white/[0.04] rounded-[20px] overflow-hidden transition-all duration-500 hover:border-primary/20 hover:bg-[#0c0c0c] hover:-translate-y-2 shadow-xl"
+                      className="group flex flex-col bg-[#0a0a0a]/50 border border-white/[0.03] rounded-[24px] p-2 transition-all duration-500 hover:border-primary/20 hover:bg-[#0c0c0c] hover:-translate-y-1 shadow-xl"
                     >
                       {item.image ? (
-                        <div className="aspect-square w-full flex items-center justify-center p-8 relative bg-black/20">
+                        <div className="aspect-[1.1/1] w-full flex items-center justify-center p-6 relative bg-white/[0.02] border border-white/[0.03] rounded-[20px] overflow-hidden">
                           <img 
                             src={item.image} 
                             alt={item.name}
-                            className="max-h-full max-w-full object-contain transition-transform duration-700 group-hover:scale-110 z-10 drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]"
+                            className="max-h-full max-w-full object-contain transition-transform duration-700 group-hover:scale-110 z-10 drop-shadow-[0_8px_16px_rgba(0,0,0,0.6)]"
                           />
                         </div>
                       ) : (
-                        <div className="h-1 w-full bg-gradient-to-r from-transparent via-white/5 to-transparent" />
+                        <div className="h-0.5 w-full bg-gradient-to-r from-transparent via-white/5 to-transparent my-2" />
                       )}
                       
-                      <div className="p-6 pt-4 flex flex-col items-center text-center">
-                        <h3 className="text-white text-[13px] font-semibold mb-1.5 tracking-wide group-hover:text-primary transition-colors duration-300">
+                      <div className="px-4 py-3 flex flex-col items-center text-center">
+                        <h3 className="text-white text-[12px] font-semibold mb-1 tracking-wide group-hover:text-primary transition-colors duration-300">
                           {item.name}
                         </h3>
-                        <p className="text-white/30 text-[10px] font-medium uppercase tracking-widest leading-relaxed">
+                        <p className="text-white/25 text-[9px] font-medium uppercase tracking-widest truncate w-full">
                           {item.spec}
                         </p>
                       </div>
