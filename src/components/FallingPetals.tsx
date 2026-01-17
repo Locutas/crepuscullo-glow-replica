@@ -19,7 +19,7 @@ const FallingPetals = () => {
       const petal = document.createElement('div');
       petal.className = 'petal';
       
-      const size = Math.random() * 12 + 6;
+      const size = Math.random() * 10 + 5; // Tamanhos um pouco menores para leveza
       const color = colors[Math.floor(Math.random() * colors.length)];
       
       petal.style.width = `${size}px`;
@@ -29,11 +29,12 @@ const FallingPetals = () => {
       const startX = Math.random() * 100;
       petal.style.left = `${startX}%`;
       
-      const duration = Math.random() * 5 + 7;
+      // Aumentado para 12s a 20s para uma queda bem mais lenta
+      const duration = Math.random() * 8 + 12; 
       const delay = Math.random() * 5;
       
       petal.style.animation = `fall ${duration}s linear ${delay}s infinite`;
-      petal.style.opacity = (Math.random() * 0.4 + 0.3).toString();
+      petal.style.opacity = (Math.random() * 0.3 + 0.2).toString(); // Mais sutis
       
       container.appendChild(petal);
 
@@ -42,7 +43,8 @@ const FallingPetals = () => {
       }, (duration + delay) * 1000);
     };
 
-    const interval = setInterval(createPetal, 400);
+    // Reduzida a frequência para combinar com a velocidade mais lenta
+    const interval = setInterval(createPetal, 600);
 
     for (let i = 0; i < 15; i++) {
       createPetal();
