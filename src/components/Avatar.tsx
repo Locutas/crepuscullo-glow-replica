@@ -13,10 +13,11 @@ const Avatar = ({ imageUrl, alt }: AvatarProps) => {
       {/* Brilho Vermelho de Fundo (Glow Ambiental) */}
       <div className="absolute w-44 h-44 bg-primary/20 blur-[50px] rounded-full pointer-events-none" />
       
-      {/* Container Principal do Avatar - Estilo Glassmorphism Circular */}
-      <div className="relative w-44 h-44 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-md p-2 animate-float z-10 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
-        {/* Borda Interna para dar profundidade */}
-        <div className="w-full h-full rounded-full border border-white/5 overflow-hidden flex items-center justify-center bg-black/20">
+      {/* Borda Vermelha Estática */}
+      <div className="relative w-44 h-44 rounded-full border-2 border-primary bg-black/20 flex items-center justify-center overflow-visible shadow-[0_0_20px_rgba(255,70,85,0.3)]">
+        
+        {/* Imagem que Flutua */}
+        <div className="w-[92%] h-[92%] rounded-full overflow-hidden animate-float shadow-2xl">
           <img 
             src={imageUrl} 
             alt={alt}
@@ -25,7 +26,7 @@ const Avatar = ({ imageUrl, alt }: AvatarProps) => {
         </div>
       </div>
 
-      {/* Sombra dinâmica projetada no fundo */}
+      {/* Sombra dinâmica que acompanha a flutuação da imagem */}
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-24 h-5 bg-black/80 blur-xl rounded-[100%] animate-shadow" />
     </div>
   );
