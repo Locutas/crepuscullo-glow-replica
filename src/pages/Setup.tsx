@@ -61,7 +61,7 @@ const Setup = () => {
           
           {/* Hero Section do Setup */}
           <div className="flex flex-col items-center text-center mb-16 page-transition">
-            <div className="relative w-48 h-48 mb-8">
+            <div className="relative w-40 h-40 mb-6">
               <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-pulse" />
               <img 
                 src="https://i.imgur.com/cPvNAwl.png" 
@@ -72,7 +72,7 @@ const Setup = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-[10px] uppercase font-space">
               SETUP
             </h1>
-            <p className="text-white/50 text-[14px] uppercase tracking-[3px] font-medium max-w-md">
+            <p className="text-white/50 text-[13px] uppercase tracking-[3px] font-medium whitespace-nowrap">
               Os equipamentos que uso para jogar e fazer as lives
             </p>
           </div>
@@ -83,7 +83,7 @@ const Setup = () => {
               className="bg-[#080808] border border-white/[0.05] rounded-[20px] p-6 md:p-8 page-transition"
             >
               {/* Header da Seção */}
-              <div className="flex items-center gap-3 mb-8">
+              <div className="flex items-center gap-3 mb-6">
                 <div className="text-white/80">
                   {section.icon}
                 </div>
@@ -92,15 +92,15 @@ const Setup = () => {
                 </h2>
               </div>
 
-              {/* Grid de Itens */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {/* Grid de Itens Mais Compacto na Vertical */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {section.items.map((item, itemIdx) => (
                   <div 
                     key={itemIdx} 
-                    className="bg-[#0f0f0f] border border-white/[0.03] rounded-[16px] p-4 transition-all duration-300 hover:border-white/10 hover:bg-[#121212] group"
+                    className="bg-[#0f0f0f] border border-white/[0.03] rounded-[16px] p-3 transition-all duration-300 hover:border-white/10 hover:bg-[#121212] group"
                   >
-                    {/* Imagem do Produto */}
-                    <div className="aspect-[16/9] bg-black/40 rounded-lg overflow-hidden mb-4 flex items-center justify-center border border-white/[0.02]">
+                    {/* Imagem do Produto com Aspect Ratio mais achatado */}
+                    <div className="aspect-[21/9] bg-black/40 rounded-lg overflow-hidden mb-3 flex items-center justify-center border border-white/[0.02]">
                       {item.image ? (
                         <img 
                           src={item.image} 
@@ -108,23 +108,23 @@ const Setup = () => {
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                       ) : (
-                        <Cpu className="w-8 h-8 text-white/5" />
+                        <Cpu className="w-6 h-6 text-white/5" />
                       )}
                     </div>
 
-                    {/* Conteúdo Info */}
-                    <div className="space-y-1">
+                    {/* Conteúdo Info Compacto */}
+                    <div className="space-y-0.5">
                       <div className="flex items-center justify-between gap-2">
-                        <h3 className="text-white text-[14px] font-bold truncate">
+                        <h3 className="text-white text-[13px] font-bold truncate">
                           {item.name}
                         </h3>
                         {item.badge && (
-                          <span className="px-1.5 py-0.5 rounded bg-[#2d1618] text-[#ff4655] text-[9px] font-bold">
+                          <span className="px-1.5 py-0.5 rounded bg-[#2d1618] text-[#ff4655] text-[8px] font-bold">
                             {item.badge}
                           </span>
                         )}
                       </div>
-                      <p className="text-white/30 text-[12px] leading-relaxed line-clamp-1 uppercase tracking-wider">
+                      <p className="text-white/30 text-[11px] leading-relaxed line-clamp-1 uppercase tracking-wider">
                         {item.spec}
                       </p>
                     </div>
