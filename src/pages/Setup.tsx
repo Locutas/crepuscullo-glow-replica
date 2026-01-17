@@ -16,7 +16,7 @@ const Setup = () => {
       category: "MONITOR",
       icon: <Monitor className="w-5 h-5" />,
       items: [
-        { name: "AOC Hero 24G2/BK", spec: "Monitor Principal", badge: "144Hz", image: monitorPrincipal }
+        { name: "Monitor Principal", spec: "AOC Hero 24G2/BK", badge: "144Hz", image: monitorPrincipal }
       ]
     },
     {
@@ -87,12 +87,12 @@ const Setup = () => {
                 </h2>
               </div>
 
-              {/* Grid de Itens com efeito suave no card inteiro */}
+              {/* Grid de Itens */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {section.items.map((item, itemIdx) => (
                   <div 
                     key={itemIdx} 
-                    className="bg-white/[0.03] rounded-[16px] p-3 transition-all duration-500 ease-out hover:bg-white/[0.06] hover:scale-[1.015] hover:shadow-[0_10px_30px_-10px_rgba(255,70,85,0.08)] group"
+                    className="bg-white/[0.03] border border-transparent rounded-[16px] p-3 transition-all duration-300 ease-out hover:bg-white/[0.06] hover:border-primary/40 hover:scale-[1.015] group"
                   >
                     {/* Imagem do Produto */}
                     <div className="aspect-[21/9] bg-black/40 rounded-lg overflow-hidden mb-3 flex items-center justify-center">
@@ -100,10 +100,10 @@ const Setup = () => {
                         <img 
                           src={item.image} 
                           alt={item.name}
-                          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                          className="w-full h-full object-cover"
                         />
                       ) : (
-                        <Cpu className="w-6 h-6 text-white/5 transition-transform duration-700 group-hover:scale-110" />
+                        <Cpu className="w-6 h-6 text-white/5" />
                       )}
                     </div>
 
