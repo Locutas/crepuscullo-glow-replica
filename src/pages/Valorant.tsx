@@ -64,7 +64,7 @@ const Valorant = () => {
                 <Layout className="w-5 h-5" />
               </div>
               <h2 className="text-lg font-bold text-white tracking-widest uppercase">
-                STATUS
+                STATUS E FAVORITOS
               </h2>
             </div>
 
