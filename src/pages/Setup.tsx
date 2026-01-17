@@ -1,9 +1,9 @@
-import { Monitor, Headphones, Keyboard, Cpu, Mic2 } from 'lucide-react';
+import { Monitor, Headphones, Keyboard, Cpu } from 'lucide-react';
 import Header from '@/components/Header';
 import FallingPetals from '@/components/FallingPetals';
 import AudioPlayer from '@/components/AudioPlayer';
 
-// Importando os assets existentes
+// Assets
 import monitorPrincipal from '@/assets/monitor-principal.png';
 import monitorSecundario from '@/assets/monitor-secundario.png';
 import headsetImg from '@/assets/headset.png';
@@ -16,7 +16,7 @@ const Setup = () => {
   const setupSections = [
     {
       category: "MONITORES",
-      icon: <Monitor className="w-5 h-5" />,
+      icon: <Monitor className="w-4 h-4" />,
       items: [
         { name: "Monitor Principal", spec: "AOC 144 Hz", image: monitorPrincipal },
         { name: "Monitor Secundário", spec: "Samsung Odyssey G3 27 G30A - 180Hz", image: monitorSecundario }
@@ -24,7 +24,7 @@ const Setup = () => {
     },
     {
       category: "ÁUDIO",
-      icon: <Headphones className="w-5 h-5" />,
+      icon: <Headphones className="w-4 h-4" />,
       items: [
         { name: "Headset", spec: "HyperX Cloud Alpha S", image: headsetImg },
         { name: "Fone de ouvido", spec: "KZ ZS10 Pro", image: foneImg },
@@ -33,7 +33,7 @@ const Setup = () => {
     },
     {
       category: "PERIFÉRICOS",
-      icon: <Keyboard className="w-5 h-5" />,
+      icon: <Keyboard className="w-4 h-4" />,
       items: [
         { name: "Teclado", spec: "HyperX Alloy Origins 60", image: tecladoImg },
         { name: "Mouse", spec: "Attack Shark X3", image: mouseImg }
@@ -41,7 +41,7 @@ const Setup = () => {
     },
     {
       category: "HARDWARE",
-      icon: <Cpu className="w-5 h-5" />,
+      icon: <Cpu className="w-4 h-4" />,
       items: [
         { name: "Processador", spec: "Ryzen 7800X3D" },
         { name: "Placa de Vídeo", spec: "Nvidia GeForce RTX 3050" },
@@ -58,42 +58,55 @@ const Setup = () => {
       <FallingPetals />
       <Header />
       
-      <main className="relative z-10 pt-40 pb-24 px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-20">
-            <h1 className="text-5xl md:text-7xl font-bold text-white tracking-[12px] uppercase font-['Space_Grotesk'] mb-6">
+      <main className="relative z-10 pt-36 pb-24 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-white tracking-[15px] uppercase font-space mb-4">
               SETUP
             </h1>
-            <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
+            <div className="w-16 h-[2px] bg-primary mx-auto" />
           </div>
 
-          <div className="space-y-16">
+          <div className="space-y-20">
             {setupSections.map((section, idx) => (
-              <section key={idx} className="page-transition">
-                <div className="flex items-center gap-4 mb-8 opacity-60">
-                  {section.icon}
-                  <h2 className="text-xs font-bold uppercase tracking-[4px]">{section.category}</h2>
+              <section key={idx} className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+                <div className="flex items-center gap-3 mb-8 ml-2">
+                  <div className="p-2 bg-white/5 rounded-lg text-primary">
+                    {section.icon}
+                  </div>
+                  <h2 className="text-[10px] font-bold uppercase tracking-[5px] text-white/40">
+                    {section.category}
+                  </h2>
                 </div>
                 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {section.items.map((item, itemIdx) => (
-                    <div key={itemIdx} className="setup-card overflow-hidden group">
-                      {item.image && (
-                        <div className="h-48 w-full overflow-hidden bg-white/[0.02] flex items-center justify-center p-4 border-b border-white/[0.05]">
+                    <div 
+                      key={itemIdx} 
+                      className="setup-card flex flex-col h-full group hover:translate-y-[-4px] transition-all duration-500"
+                    >
+                      {item.image ? (
+                        <div className="aspect-video w-full overflow-hidden bg-white/[0.01] flex items-center justify-center p-8 border-b border-white/5 relative">
                           <img 
                             src={item.image} 
                             alt={item.name}
-                            className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-110 drop-shadow-2xl"
+                            className="max-h-full max-w-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
                           />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                         </div>
+                      ) : (
+                        <div className="h-4 bg-white/5 w-full border-b border-white/5" />
                       )}
-                      <div className="p-6">
-                        <h3 className="text-white/90 font-bold text-sm mb-1 group-hover:text-primary transition-colors">
-                          {item.name}
-                        </h3>
-                        <p className="text-white/40 text-xs tracking-wider font-medium uppercase">
-                          {item.spec}
-                        </p>
+                      
+                      <div className="p-6 flex flex-col justify-between flex-grow">
+                        <div>
+                          <h3 className="text-white font-medium text-sm mb-2 group-hover:text-primary transition-colors duration-300">
+                            {item.name}
+                          </h3>
+                          <p className="text-white/40 text-[11px] tracking-wider leading-relaxed">
+                            {item.spec}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   ))}
