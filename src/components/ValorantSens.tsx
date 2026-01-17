@@ -1,10 +1,10 @@
-import { MousePointer2, Zap } from 'lucide-react';
+import { Mouse, MousePointer2, Target, Zap } from 'lucide-react';
 
 const ValorantSens = () => {
   const settings = [
-    { label: "DPI", value: "800", icon: <Zap className="w-4 h-4" /> },
-    { label: "Sensibilidade", value: "0.35", icon: <MousePointer2 className="w-4 h-4" /> },
-    { label: "eDPI", value: "280", icon: <Zap className="w-4 h-4" /> },
+    { label: "DPI", value: "1600", icon: <Mouse className="w-4 h-4" /> },
+    { label: "Sensibilidade", value: "0.17", icon: <MousePointer2 className="w-4 h-4" /> },
+    { label: "Sensibilidade Mirando", value: "1.0", icon: <Target className="w-4 h-4" /> },
     { label: "Hz", value: "1000", icon: <Zap className="w-4 h-4" /> },
   ];
 
