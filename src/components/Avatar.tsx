@@ -11,15 +11,12 @@ const Avatar = ({ imageUrl, alt }: AvatarProps) => {
   return (
     <div className="relative w-56 h-56 mx-auto mb-10 flex items-center justify-center">
       {/* 1. Elemento de Fundo Estático (A borda fixa vermelha) */}
-      <div className="absolute w-40 h-40 rounded-full border-2 border-primary/40 bg-black/20 backdrop-blur-sm shadow-[0_0_40px_rgba(255,70,85,0.2)] flex items-center justify-center">
-        {/* Glow interno da borda */}
-        <div className="absolute inset-0 rounded-full shadow-[inset_0_0_20px_rgba(255,70,85,0.15)]" />
+      <div className="absolute w-40 h-40 rounded-full border-2 border-primary/40 bg-black/20 backdrop-blur-sm shadow-[0_0_40px_rgba(255,70,85,0.1)] flex items-center justify-center">
+        {/* Glow interno da borda mais sutil */}
+        <div className="absolute inset-0 rounded-full shadow-[inset_0_0_20px_rgba(255,70,85,0.1)]" />
       </div>
 
-      {/* 2. Círculo de Brilho Vermelho (Glow intenso atrás do avatar) */}
-      <div className="absolute w-32 h-32 bg-primary/30 rounded-full blur-[50px] animate-pulse" />
-
-      {/* 3. Avatar Flutuante (Sem borda própria) */}
+      {/* 2. Avatar Flutuante (Sem borda própria) */}
       <div className="relative w-44 h-44 animate-float z-10 flex items-center justify-center">
         <div className="w-40 h-40 rounded-full overflow-hidden">
           <img 
@@ -30,7 +27,7 @@ const Avatar = ({ imageUrl, alt }: AvatarProps) => {
         </div>
       </div>
 
-      {/* 4. Sombra dinâmica projetada na borda de fundo */}
+      {/* 3. Sombra dinâmica projetada na borda de fundo */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-24 h-6 bg-black/60 blur-xl rounded-[100%] animate-shadow" />
     </div>
   );

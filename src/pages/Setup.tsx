@@ -5,8 +5,6 @@ import AudioPlayer from '@/components/AudioPlayer';
 
 // Assets
 import monitorPrincipal from '@/assets/monitor-principal.png';
-import monitorSecundario from '@/assets/monitor-secundario.png';
-import headsetImg from '@/assets/headset.png';
 import foneImg from '@/assets/fone.png';
 import microfoneImg from '@/assets/microfone.png';
 import tecladoImg from '@/assets/teclado.png';
@@ -15,20 +13,18 @@ import mouseImg from '@/assets/mouse.png';
 const Setup = () => {
   const setupSections = [
     {
-      category: "MONITORES",
+      category: "MONITOR",
       icon: <Monitor className="w-5 h-5" />,
       items: [
-        { name: "Monitor Principal", spec: "AOC Agon 25G3ZM/BK25", badge: "240Hz", image: monitorPrincipal },
-        { name: "Monitor Secundário", spec: "Samsung Odyssey G3 27 G30A", badge: "180Hz", image: monitorSecundario }
+        { name: "AOC Hero 24G2/BK", spec: "Monitor Principal", badge: "144Hz", image: monitorPrincipal }
       ]
     },
     {
       category: "ÁUDIO",
       icon: <Headphones className="w-5 h-5" />,
       items: [
-        { name: "Headset", spec: "HyperX Cloud Alpha S", image: headsetImg },
-        { name: "Fone de ouvido", spec: "KZ ZS10 Pro", image: foneImg },
-        { name: "Microfone", spec: "FIFINE AM8", image: microfoneImg }
+        { name: "Fone de ouvido", spec: "FIFINE H6", image: foneImg },
+        { name: "Microfone", spec: "FIFINE A6", image: microfoneImg }
       ]
     },
     {
@@ -61,8 +57,7 @@ const Setup = () => {
           
           {/* Hero Section do Setup */}
           <div className="flex flex-col items-center text-center mb-16 page-transition">
-            <div className="relative w-40 h-40 mb-6">
-              <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-pulse" />
+            <div className="relative w-40 h-40 mb-6 flex items-center justify-center">
               <img 
                 src="https://i.imgur.com/cPvNAwl.png" 
                 alt="Setup Icon" 
