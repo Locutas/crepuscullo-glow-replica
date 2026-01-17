@@ -12,12 +12,12 @@ const ValorantStats = () => {
       imageUrl: 'https://media.valorant-api.com/agents/1e58de9d-4950-5125-93e9-a0aee9f98746/displayicon.png' 
     },
     { 
-      name: 'Sage', 
-      imageUrl: 'https://media.valorant-api.com/agents/569fdd95-4d10-4c10-85a1-c8733471f0ad/displayicon.png' 
+      name: 'Reyna', 
+      imageUrl: 'https://i.imgur.com/XcrpfUI.png' 
     },
     { 
-      name: 'Cypher', 
-      imageUrl: 'https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-00ad6e383de8/displayicon.png' 
+      name: 'Jett', 
+      imageUrl: 'https://i.imgur.com/lvfeGCO.png' 
     },
   ];
 
