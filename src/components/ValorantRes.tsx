@@ -1,11 +1,11 @@
-import { Monitor, Move, AspectRatio, Scaling } from 'lucide-react';
+import { Monitor, Maximize, RectangleHorizontal, Expand } from 'lucide-react';
 
 const ValorantRes = () => {
   const settings = [
     { label: "Resolução", value: "1920x1080", icon: <Monitor className="w-4 h-4" /> },
-    { label: "Aspect Ratio", value: "16:9", icon: <AspectRatio className="w-4 h-4" /> },
-    { label: "Modo", value: "Fullscreen", icon: <Move className="w-4 h-4" /> },
-    { label: "Scaling", value: "Native", icon: <Scaling className="w-4 h-4" /> },
+    { label: "Aspect Ratio", value: "16:9", icon: <RectangleHorizontal className="w-4 h-4" /> },
+    { label: "Modo", value: "Fullscreen", icon: <Maximize className="w-4 h-4" /> },
+    { label: "Scaling", value: "Native", icon: <Expand className="w-4 h-4" /> },
   ];
 
   return (
