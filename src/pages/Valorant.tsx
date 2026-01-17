@@ -71,6 +71,20 @@ const Valorant = () => {
             <ValorantStats />
           </div>
 
+          {/* Resolução Section (Agora acima de Sensibilidade) */}
+          <div className="bg-white/[0.02] backdrop-blur-md rounded-[24px] p-6 md:p-8 page-transition">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="text-white/80">
+                <Monitor className="w-5 h-5" />
+              </div>
+              <h2 className="text-lg font-bold text-white tracking-widest uppercase">
+                RESOLUÇÃO
+              </h2>
+            </div>
+
+            <ValorantRes />
+          </div>
+
           {/* Sensibilidade Section */}
           <div className="bg-white/[0.02] backdrop-blur-md rounded-[24px] p-6 md:p-8 page-transition">
             <div className="flex items-center gap-3 mb-8">
@@ -83,20 +97,6 @@ const Valorant = () => {
             </div>
 
             <ValorantSens />
-          </div>
-
-          {/* Resolução Section */}
-          <div className="bg-white/[0.02] backdrop-blur-md rounded-[24px] p-6 md:p-8 page-transition">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="text-white/80">
-                <Monitor className="w-5 h-5" />
-              </div>
-              <h2 className="text-lg font-bold text-white tracking-widest uppercase">
-                RESOLUÇÃO
-              </h2>
-            </div>
-
-            <ValorantRes />
           </div>
 
           {/* Miras Section */}
