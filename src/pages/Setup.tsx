@@ -58,11 +58,17 @@ const Setup = () => {
           {/* Hero Section do Setup */}
           <div className="flex flex-col items-center text-center mb-16 page-transition">
             <div className="relative w-40 h-40 mb-6 flex items-center justify-center">
+              {/* Círculo de Brilho de Fundo */}
+              <div className="absolute w-32 h-32 rounded-full border-2 border-primary/40 bg-black/20 backdrop-blur-sm shadow-[0_0_60px_rgba(255,70,85,0.4)]" />
+              
               <img 
                 src="https://i.imgur.com/cPvNAwl.png" 
                 alt="Setup Icon" 
-                className="relative w-full h-full object-contain animate-float"
+                className="relative w-full h-full object-contain animate-float z-10"
               />
+              
+              {/* Sombra dinâmica abaixo do ícone */}
+              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-20 h-4 bg-black/60 blur-xl rounded-[100%] animate-shadow" />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-[10px] uppercase font-space">
               SETUP
