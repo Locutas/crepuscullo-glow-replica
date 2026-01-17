@@ -10,28 +10,40 @@ const FallingPetals = () => {
     const createPetal = () => {
       const petal = document.createElement('div');
       petal.className = 'petal';
-      petal.style.left = Math.random() * 100 + '%';
-      petal.style.animationDuration = `${Math.random() * 8 + 10}s, ${Math.random() * 2 + 2}s`;
-      petal.style.animationDelay = `${Math.random() * 5}s, 0s`;
       
-      const size = Math.random() * 6 + 4;
+      const startX = Math.random() * 110 - 5; // Start from -5% to 105% width
+      petal.style.left = startX + '%';
+      
+      // Speed variation (faster like the reference site)
+      const duration = Math.random() * 5 + 6; // 6s to 11s
+      petal.style.animationDuration = `${duration}s`;
+      
+      // Size variation
+      const size = Math.random() * 8 + 6; // 6px to 14px
       petal.style.width = size + 'px';
       petal.style.height = size + 'px';
       
+      // Random rotation
+      petal.style.transform = `rotate(${Math.random() * 360}deg)`;
+      
+      // Opacity variation
+      petal.style.opacity = (Math.random() * 0.4 + 0.4).toString();
+
       container.appendChild(petal);
 
+      // Remove after animation finishes
       setTimeout(() => {
         petal.remove();
-      }, 20000);
+      }, duration * 1000);
     };
 
-    // Create initial petals
-    for (let i = 0; i < 40; i++) {
-      setTimeout(createPetal, i * 200);
+    // Initial burst
+    for (let i = 0; i < 50; i++) {
+      setTimeout(createPetal, Math.random() * 3000);
     }
 
-    // Continue creating petals
-    const interval = setInterval(createPetal, 400);
+    // High frequency generation to match density
+    const interval = setInterval(createPetal, 150);
 
     return () => {
       clearInterval(interval);
