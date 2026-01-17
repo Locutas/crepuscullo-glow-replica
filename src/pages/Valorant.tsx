@@ -2,8 +2,9 @@ import Header from '@/components/Header';
 import FallingPetals from '@/components/FallingPetals';
 import AudioPlayer from '@/components/AudioPlayer';
 import ValorantStats from '@/components/ValorantStats';
+import ValorantSens from '@/components/ValorantSens';
 import CrosshairCard from '@/components/CrosshairCard';
-import { Layout, Crosshair } from 'lucide-react';
+import { Layout, Crosshair, Settings2 } from 'lucide-react';
 
 const Valorant = () => {
   const crosshairs = [
@@ -67,6 +68,20 @@ const Valorant = () => {
             </div>
 
             <ValorantStats />
+          </div>
+
+          {/* Sensibilidade Section */}
+          <div className="bg-white/[0.02] backdrop-blur-md rounded-[24px] p-6 md:p-8 page-transition">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="text-white/80">
+                <Settings2 className="w-5 h-5" />
+              </div>
+              <h2 className="text-lg font-bold text-white tracking-widest uppercase">
+                SENSIBILIDADE
+              </h2>
+            </div>
+
+            <ValorantSens />
           </div>
 
           {/* Miras Section */}
