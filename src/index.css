@@ -78,22 +78,42 @@
   border-color: rgba(255, 70, 85, 0.3);
 }
 
-/* Cursor Customizado */
+/* Cursor Customizado - Cruz Vermelha */
 .custom-cursor {
-  width: 8px;
-  height: 8px;
-  background-color: #ff4655;
-  border-radius: 50%;
+  width: 20px;
+  height: 20px;
   position: fixed;
   pointer-events: none;
   z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-cursor::before,
+.custom-cursor::after {
+  content: '';
+  position: absolute;
+  background-color: #ff4655;
   transition: transform 0.1s ease;
+}
+
+/* Linha Horizontal */
+.custom-cursor::before {
+  width: 100%;
+  height: 2px;
+}
+
+/* Linha Vertical */
+.custom-cursor::after {
+  width: 2px;
+  height: 100%;
 }
 
 .custom-cursor-outline {
   width: 40px;
   height: 40px;
-  border: 1px solid rgba(255, 70, 85, 0.5);
+  border: 1px solid rgba(255, 70, 85, 0.2);
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
