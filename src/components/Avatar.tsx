@@ -5,19 +5,19 @@ interface AvatarProps {
 
 const Avatar = ({ imageUrl, alt }: AvatarProps) => {
   return (
-    <div className="relative w-40 h-40 mx-auto mb-10 group">
-      {/* Sombra projetada abaixo */}
-      <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-24 h-4 bg-black/40 blur-xl rounded-[100%] transition-transform duration-500 group-hover:scale-110" />
+    <div className="relative w-44 h-44 mx-auto mb-12">
+      {/* Sombra projetada no chão que escala com a flutuação */}
+      <div className="absolute -bottom-6 left-1/2 w-28 h-5 bg-black/60 blur-xl rounded-[100%] animate-shadow" />
       
-      {/* Brilho ambiental escuro no hover */}
-      <div className="absolute inset-0 rounded-full bg-black/40 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      
-      {/* Container do Avatar com borda escura sutil */}
-      <div className="relative w-full h-full rounded-full overflow-hidden bg-secondary/80 flex items-center justify-center border border-black/20 transition-all duration-500 group-hover:shadow-[0_0_40px_rgba(0,0,0,0.9)]">
+      {/* Container do Avatar com a animação de flutuação */}
+      <div className="relative w-full h-full rounded-full overflow-hidden bg-secondary/40 backdrop-blur-sm border border-white/10 flex items-center justify-center animate-float group">
+        {/* Brilho interno sutil */}
+        <div className="absolute inset-0 rounded-full border border-white/5 pointer-events-none" />
+        
         <img 
           src={imageUrl} 
           alt={alt}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
       </div>
     </div>
