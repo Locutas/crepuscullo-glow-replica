@@ -6,8 +6,6 @@ import AudioPlayer from '@/components/AudioPlayer';
 // Assets
 import monitorPrincipal from '@/assets/monitor-principal.png';
 import microfoneImg from '@/assets/microfone.png';
-import tecladoImg from '@/assets/teclado.png';
-import mouseImg from '@/assets/mouse.png';
 
 const Setup = () => {
   const setupSections = [
@@ -30,9 +28,9 @@ const Setup = () => {
       category: "PERIFÉRICOS",
       icon: <Keyboard className="w-5 h-5" />,
       items: [
-        { name: "Teclado", spec: "Royal Kludge R75", image: tecladoImg },
-        { name: "Mouse", spec: "Dareu Sakura EM90X1", image: mouseImg },
-        { name: "Webcam", spec: "Logitech C920s" }
+        { name: "Teclado", spec: "Royal Kludge R75", image: "https://i.imgur.com/6OlkGxe.png" },
+        { name: "Mouse", spec: "Dareu Sakura EM90X1", image: "https://i.imgur.com/izc86RZ.png" },
+        { name: "Webcam", spec: "Logitech C920s", image: "https://i.imgur.com/MMezS2q.png" }
       ]
     },
     {
