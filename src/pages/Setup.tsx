@@ -1,4 +1,4 @@
-import { Monitor, Headphones, Keyboard, Cpu, ChevronRight } from 'lucide-react';
+import { Monitor, Headphones, Keyboard, Cpu, MousePointer2 } from 'lucide-react';
 import Header from '@/components/Header';
 import FallingPetals from '@/components/FallingPetals';
 import AudioPlayer from '@/components/AudioPlayer';
@@ -59,61 +59,61 @@ const Setup = () => {
       <Header />
       
       <main className="relative z-10 pt-40 pb-32 px-6">
-        <div className="max-w-3xl mx-auto">
-          {/* Header Minimalista */}
-          <div className="flex flex-col items-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white tracking-[12px] uppercase font-space mb-4">
+        <div className="max-w-5xl mx-auto">
+          {/* Título Principal com Espaçamento Largo */}
+          <div className="flex flex-col items-center mb-24">
+            <h1 className="text-4xl md:text-5xl font-bold text-white tracking-[20px] uppercase font-space mb-6 ml-[20px]">
               SETUP
             </h1>
-            <div className="w-12 h-1 bg-primary rounded-full" />
+            <div className="w-16 h-1 bg-primary rounded-full shadow-[0_0_15px_rgba(255,70,85,0.4)]" />
           </div>
 
-          <div className="space-y-12">
+          <div className="space-y-20">
             {setupSections.map((section, idx) => (
               <section key={idx} className="page-transition">
-                {/* Título da Seção */}
-                <div className="flex items-center gap-3 mb-6 px-2">
-                  <div className="p-2 rounded-lg bg-white/5 text-primary">
+                {/* Cabeçalho da Seção Minimalista */}
+                <div className="flex items-center gap-3 mb-8 ml-2">
+                  <div className="w-8 h-8 rounded-lg bg-white/[0.03] border border-white/[0.05] flex items-center justify-center text-primary/80">
                     {section.icon}
                   </div>
-                  <h2 className="text-[12px] font-bold uppercase tracking-[4px] text-white/40">
+                  <h2 className="text-[11px] font-bold uppercase tracking-[5px] text-white/30 font-space">
                     {section.category}
                   </h2>
                 </div>
                 
-                {/* Lista de Itens Estilo Horizontal */}
-                <div className="grid grid-cols-1 gap-3">
+                {/* Grid em 2 Colunas (Desktop) */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {section.items.map((item, itemIdx) => (
                     <div 
                       key={itemIdx} 
-                      className="group flex items-center bg-[#0a0a0a] border border-white/[0.04] rounded-2xl p-3 transition-all duration-300 hover:border-primary/30 hover:bg-[#0e0e0e] hover:pl-5"
+                      className="group flex items-center bg-[#0a0a0a] border border-white/[0.03] rounded-2xl p-3 transition-all duration-300 hover:border-primary/40 hover:bg-[#0c0c0c] hover:shadow-[0_0_30px_rgba(255,70,85,0.05)]"
                     >
-                      {/* Image Container */}
-                      <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center bg-white/[0.02] border border-white/[0.03] rounded-xl overflow-hidden mr-4">
+                      {/* Box da Imagem à Esquerda */}
+                      <div className="w-20 h-20 flex-shrink-0 flex items-center justify-center bg-[#111] border border-white/[0.03] rounded-xl overflow-hidden transition-all duration-500 group-hover:border-primary/20">
                         {item.image ? (
                           <img 
                             src={item.image} 
                             alt={item.name}
-                            className="w-12 h-12 object-contain transition-transform group-hover:scale-110"
+                            className="w-14 h-14 object-contain transition-transform duration-500 group-hover:scale-110 drop-shadow-2xl"
                           />
                         ) : (
-                          <Cpu className="w-6 h-6 text-white/10" />
+                          <Cpu className="w-7 h-7 text-white/10 group-hover:text-primary/30 transition-colors" />
                         )}
                       </div>
                       
-                      {/* Text Content */}
-                      <div className="flex-grow">
-                        <h3 className="text-white text-[14px] font-bold mb-0.5 tracking-wide group-hover:text-primary transition-colors">
+                      {/* Conteúdo de Texto */}
+                      <div className="ml-5 flex-grow">
+                        <h3 className="text-white text-[14px] font-bold mb-1 tracking-wide group-hover:text-primary transition-colors duration-300">
                           {item.name}
                         </h3>
-                        <p className="text-white/30 text-[11px] font-medium uppercase tracking-wider">
+                        <p className="text-white/30 text-[10px] font-bold uppercase tracking-[2px] leading-tight">
                           {item.spec}
                         </p>
                       </div>
 
-                      {/* Arrow Icon (opcional para dar o look do site) */}
-                      <div className="opacity-0 group-hover:opacity-100 transition-opacity pr-4">
-                        <ChevronRight className="w-4 h-4 text-primary" />
+                      {/* Indicador de Hover */}
+                      <div className="pr-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                        <MousePointer2 className="w-4 h-4 text-primary/50" />
                       </div>
                     </div>
                   ))}
