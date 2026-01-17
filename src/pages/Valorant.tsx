@@ -6,33 +6,21 @@ import CrosshairCard from '@/components/CrosshairCard';
 import { Layout, Crosshair } from 'lucide-react';
 
 const Valorant = () => {
-  const crosshairImage = "https://i.imgur.com/tQF1xXU.png";
-  
   const crosshairs = [
-    {
-      name: "Mira 1",
-      code: "0;P;c;7;h;0;f;0;0l;3;0v;3;0o;2;0a;1;0f;0;1b;0",
-      imageUrl: crosshairImage,
-      imageClassName: "scale-[200%] object-[0%_0%]" // Top Left
-    },
-    {
-      name: "Mira 2",
-      code: "0;P;h;0;f;0;0l;2;0v;2;0o;2;0a;1;0f;0;1b;0",
-      imageUrl: crosshairImage,
-      imageClassName: "scale-[200%] object-[100%_0%]" // Top Right
-    },
-    {
-      name: "Mira 3",
-      code: "0;P;c;1;h;0;f;0;0l;2;0v;2;0o;0;0a;1;0f;0;1b;0",
-      imageUrl: crosshairImage,
-      imageClassName: "scale-[200%] object-[0%_100%]" // Bottom Left
-    },
-    {
-      name: "Mira 4",
-      code: "0;P;c;5;h;0;f;0;0l;4;0v;4;0o;2;0a;1;0f;0;1b;0",
-      imageUrl: crosshairImage,
-      imageClassName: "scale-[200%] object-[100%_100%]" // Bottom Right
-    }
+    { name: "Cruz Larga", code: "0;s;1;P;h;0;0l;7;0v;4;0g;1;0o;2;0a;1;0f;0;1b;0", imageUrl: "https://i.imgur.com/GmL6r3f.png" },
+    { name: "Cruz Fina", code: "0;P;h;0;d;1;0t;1;0l;2;0v;3;0g;1;0o;0;0a;1;0f;0;1b;0", imageUrl: "https://i.imgur.com/RBgbwTc.png" },
+    { name: "Cruz Fechada", code: "0;P;h;0;0l;4;0o;0;0a;1;0f;0;1b;0", imageUrl: "https://i.imgur.com/pkT0Wcd.png" },
+    { name: "Ponto Normal", code: "0;P;h;0;d;1;0b;0;1b;0", imageUrl: "https://i.imgur.com/4mhBUZA.png" },
+    { name: "Ponto Pelado", code: "0;P;c;5;h;0;0l;1;0o;1;0a;1;0f;0;1b;0", imageUrl: "https://i.imgur.com/AD5Pqua.png" },
+    { name: "Contornado", code: "0;p;0;s;1;P;c;5;o;1;d;1;0t;4;0l;1;0o;0;0a;1;0f;0;1b;0;A;c;7;o;1;d;1;m;1;0l;2;0o;0;0a;1;0f;0;1b;0;S;o;1", imageUrl: "https://i.imgur.com/6BZ4YFd.png" },
+    { name: "Intermediaria", code: "0;s;1;P;h;0;0t;3;0l;0;0v;4;0g;1;0o;1;0a;0.707;0f;0;1t;1;1l;6;1v;3;1g;1;1o;2;1a;1;1m;0;1f;0;S;c;5;s;0.542;o;1", imageUrl: "https://i.imgur.com/tZtMHhG.png" },
+    { name: "Cruz Fina PQN", code: "0;s;1;P;o;0;f;0;0b;0;1t;1;1o;1;1a;1;1m;0;1f;0", imageUrl: "https://i.imgur.com/0SNBObJ.png" },
+    { name: "Cruz 1080", code: "0;c;1;s;1;P;h;0;m;1;0t;3;0l;0;0v;3;0g;1;0o;0;0a;0.626;0f;0;1t;1;1l;4;1g;1;1o;1;1a;1;1m;0;1f;0;S;c;0;s;0.616;o;1", imageUrl: "https://i.imgur.com/uTRrfKj.png" },
+    { name: "Ponto Pituco", code: "0;s;1;P;c;5;o;1;d;1;z;1;0t;1;0l;1;0o;0;0a;0;0f;0;1b;0;S;c;0;s;0.603;o;0.655", imageUrl: "https://i.imgur.com/gjKrL2m.png" },
+    { name: "Ponticão", code: "0;s;1;P;o;1;d;1;z;3;a;0.934;0t;1;0l;2;0o;0;0a;1;0f;0;1b;0;S;c;0;s;1.214;o;0.856", imageUrl: "https://i.imgur.com/dCRZ8El.png" },
+    { name: "Cruz Normal", code: "0;P;h;0;f;0;0l;5;0o;2;0a;1;0f;0;1b;0", imageUrl: "https://i.imgur.com/L3UBYu0.png" },
+    { name: "Esticadinha", code: "0;s;1;P;c;5;o;1;0v;3;0g;1;0o;0;0a;1;0f;0;1b;0", imageUrl: "https://i.imgur.com/JIl5WnR.png" },
+    { name: "Gigantesca", code: "0;s;1;P;h;0;f;0;0l;10;0a;1;0f;0;1l;0;1o;1;1a;1;1m;0;1f;0;S;c;0;s;0.359", imageUrl: "https://i.imgur.com/fT0FClK.png" }
   ];
 
   return (
@@ -91,14 +79,13 @@ const Valorant = () => {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {crosshairs.map((xhair, index) => (
                 <CrosshairCard 
                   key={index}
                   name={xhair.name}
                   code={xhair.code}
                   imageUrl={xhair.imageUrl}
-                  imageClassName={xhair.imageClassName}
                 />
               ))}
             </div>
