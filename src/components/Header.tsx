@@ -1,30 +1,28 @@
-import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
-  const [activeLink, setActiveLink] = useState('');
+  const location = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border/50">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border/30">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-center gap-8">
-          <a 
-            href="#setup" 
-            onClick={() => setActiveLink('setup')}
-            className={`text-sm font-medium transition-colors hover:text-primary ${
-              activeLink === 'setup' ? 'text-primary' : 'text-foreground'
+          <Link 
+            to="/setup"
+            className={`text-sm font-medium transition-colors hover:text-foreground ${
+              location.pathname === '/setup' ? 'text-foreground' : 'text-muted-foreground'
             }`}
           >
             Setup
-          </a>
-          <a 
-            href="#contato" 
-            onClick={() => setActiveLink('contato')}
-            className={`text-sm font-medium transition-colors hover:text-primary ${
-              activeLink === 'contato' ? 'text-primary' : 'text-foreground'
+          </Link>
+          <Link 
+            to="/contato"
+            className={`text-sm font-medium transition-colors hover:text-foreground ${
+              location.pathname === '/contato' ? 'text-foreground' : 'text-muted-foreground'
             }`}
           >
             Contato
-          </a>
+          </Link>
         </div>
       </nav>
     </header>
