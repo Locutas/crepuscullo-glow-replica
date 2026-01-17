@@ -59,8 +59,8 @@ const Setup = () => {
       <Header />
       
       <main className="relative z-10 pt-40 pb-32 px-6">
-        <div className="max-w-5xl mx-auto">
-          {/* Título Principal com Espaçamento Largo */}
+        <div className="max-w-6xl mx-auto">
+          {/* Título Principal */}
           <div className="flex flex-col items-center mb-24">
             <h1 className="text-4xl md:text-5xl font-bold text-white tracking-[20px] uppercase font-space mb-6 ml-[20px]">
               SETUP
@@ -68,28 +68,28 @@ const Setup = () => {
             <div className="w-16 h-1 bg-primary rounded-full shadow-[0_0_15px_rgba(255,70,85,0.4)]" />
           </div>
 
-          <div className="space-y-20">
+          <div className="space-y-16">
             {setupSections.map((section, idx) => (
               <section key={idx} className="page-transition">
-                {/* Cabeçalho da Seção Minimalista */}
-                <div className="flex items-center gap-3 mb-8 ml-2">
-                  <div className="w-8 h-8 rounded-lg bg-white/[0.03] border border-white/[0.05] flex items-center justify-center text-primary/80">
+                {/* Cabeçalho da Seção */}
+                <div className="flex items-center gap-3 mb-6 ml-1">
+                  <div className="w-7 h-7 rounded bg-white/[0.03] border border-white/[0.05] flex items-center justify-center text-primary/80">
                     {section.icon}
                   </div>
-                  <h2 className="text-[11px] font-bold uppercase tracking-[5px] text-white/30 font-space">
+                  <h2 className="text-[10px] font-bold uppercase tracking-[4px] text-white/30 font-space">
                     {section.category}
                   </h2>
                 </div>
                 
-                {/* Grid em 2 Colunas (Desktop) */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* Grid com tamanhos de cards calibrados */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
                   {section.items.map((item, itemIdx) => (
                     <div 
                       key={itemIdx} 
-                      className="group flex items-center bg-[#0a0a0a] border border-white/[0.03] rounded-2xl p-3 transition-all duration-300 hover:border-primary/40 hover:bg-[#0c0c0c] hover:shadow-[0_0_30px_rgba(255,70,85,0.05)]"
+                      className="group flex items-center bg-[#0a0a0a] border border-white/[0.03] rounded-[20px] p-2.5 transition-all duration-300 hover:border-primary/40 hover:bg-[#0c0c0c] hover:shadow-[0_0_40px_rgba(255,70,85,0.04)]"
                     >
-                      {/* Box da Imagem à Esquerda */}
-                      <div className="w-20 h-20 flex-shrink-0 flex items-center justify-center bg-[#111] border border-white/[0.03] rounded-xl overflow-hidden transition-all duration-500 group-hover:border-primary/20">
+                      {/* Container da Imagem maior (idêntico ao site) */}
+                      <div className="w-[84px] h-[84px] flex-shrink-0 flex items-center justify-center bg-[#111] border border-white/[0.03] rounded-[14px] overflow-hidden transition-all duration-500 group-hover:border-primary/20">
                         {item.image ? (
                           <img 
                             src={item.image} 
@@ -97,23 +97,23 @@ const Setup = () => {
                             className="w-14 h-14 object-contain transition-transform duration-500 group-hover:scale-110 drop-shadow-2xl"
                           />
                         ) : (
-                          <Cpu className="w-7 h-7 text-white/10 group-hover:text-primary/30 transition-colors" />
+                          <Cpu className="w-8 h-8 text-white/10 group-hover:text-primary/30 transition-colors" />
                         )}
                       </div>
                       
-                      {/* Conteúdo de Texto */}
-                      <div className="ml-5 flex-grow">
-                        <h3 className="text-white text-[14px] font-bold mb-1 tracking-wide group-hover:text-primary transition-colors duration-300">
+                      {/* Texto com tipografia refinada */}
+                      <div className="ml-5 flex-grow pr-2">
+                        <h3 className="text-white text-[15px] font-bold mb-0.5 tracking-wide group-hover:text-primary transition-colors duration-300">
                           {item.name}
                         </h3>
-                        <p className="text-white/30 text-[10px] font-bold uppercase tracking-[2px] leading-tight">
+                        <p className="text-white/20 text-[10px] font-bold uppercase tracking-[2px] leading-tight">
                           {item.spec}
                         </p>
                       </div>
 
-                      {/* Indicador de Hover */}
+                      {/* Indicador lateral */}
                       <div className="pr-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                        <MousePointer2 className="w-4 h-4 text-primary/50" />
+                        <MousePointer2 className="w-4 h-4 text-primary/40" />
                       </div>
                     </div>
                   ))}
