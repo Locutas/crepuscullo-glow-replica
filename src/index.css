@@ -2,100 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
 @layer base {
   :root {
     --background: 0 0% 2%;
     --foreground: 0 0% 100%;
-
-    --card: 0 0% 5%;
-    --card-foreground: 0 0% 100%;
-
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 100%;
-
-    --primary: 358 100% 62%; /* Valorant Red: #ff4655 */
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 0 0% 8%;
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 60%;
-
-    --accent: 358 100% 62%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 0 0% 15%;
-    --input: 0 0% 10%;
-    --ring: 358 100% 62%;
-
+    --primary: 358 100% 62%;
     --radius: 0.75rem;
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
   body {
-    @apply bg-background text-foreground font-sans antialiased overflow-x-hidden;
+    @apply bg-black text-white antialiased overflow-x-hidden;
     font-family: 'Inter', sans-serif;
   }
 }
 
+/* Espaçamento e Estilo para Space Grotesk */
+.font-space {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
 /* Falling petals animation */
 @keyframes fall {
-  0% {
-    transform: translateY(-50px) rotate(0deg) translateX(0);
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.8;
-  }
-  90% {
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateY(110vh) rotate(720deg) translateX(100px);
-    opacity: 0;
-  }
+  0% { transform: translateY(-50px) rotate(0deg) translateX(0); opacity: 0; }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.8; }
+  100% { transform: translateY(110vh) rotate(720deg) translateX(100px); opacity: 0; }
 }
 
-/* Floating animation for avatar */
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
 }
 
-/* Shadow animation that syncs with float */
 @keyframes shadow-scale {
-  0%, 100% {
-    transform: translateX(-50%) scale(1);
-    opacity: 0.4;
-  }
-  50% {
-    transform: translateX(-50%) scale(0.8);
-    opacity: 0.2;
-  }
+  0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.4; }
+  50% { transform: translateX(-50%) scale(0.8); opacity: 0.2; }
 }
 
-.animate-float {
-  animation: float 4s ease-in-out infinite;
-}
-
-.animate-shadow {
-  animation: shadow-scale 4s ease-in-out infinite;
-}
+.animate-float { animation: float 4s ease-in-out infinite; }
+.animate-shadow { animation: shadow-scale 4s ease-in-out infinite; }
 
 .petal {
   position: absolute;
@@ -106,39 +53,15 @@
   z-index: 0;
 }
 
-/* Glassmorphism Card Style */
 .setup-card {
-  background: rgba(15, 15, 15, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 70, 85, 0.15);
-  border-radius: 16px;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: rgba(10, 10, 10, 0.4);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  transition: all 0.4s ease;
 }
 
 .setup-card:hover {
-  border-color: rgba(255, 70, 85, 0.5);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 70, 85, 0.1);
-}
-
-.badge-hz {
-  background: rgba(255, 70, 85, 0.15);
-  color: #ff4655;
-  padding: 2px 10px;
-  border: 1px solid rgba(255, 70, 85, 0.3);
-  border-radius: 6px;
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.page-transition {
-  animation: fadeIn 0.5s ease-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
 }

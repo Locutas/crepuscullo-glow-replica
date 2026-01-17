@@ -12,30 +12,23 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/5">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-center">
-        {/* Navigation Centralizada */}
-        <nav className="flex items-center gap-8 md:gap-12">
-          {links.map((link) => (
-            <Link 
-              key={link.path}
-              to={link.path}
-              className={cn(
-                "text-sm font-medium transition-all duration-300 relative group",
-                location.pathname === link.path 
-                  ? "text-primary" 
-                  : "text-white/70 hover:text-foreground"
-              )}
-            >
-              {link.name}
-              <span className={cn(
-                "absolute -bottom-1 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full",
-                location.pathname === link.path ? "w-full" : "w-0"
-              )} />
-            </Link>
-          ))}
-        </nav>
-      </div>
+    <header className="fixed top-8 left-0 right-0 z-50 flex justify-center px-6">
+      <nav className="bg-[#0a0a0a]/40 backdrop-blur-xl border border-white/[0.05] px-6 py-2 rounded-full flex items-center gap-1 shadow-2xl">
+        {links.map((link) => (
+          <Link 
+            key={link.path}
+            to={link.path}
+            className={cn(
+              "px-4 py-1.5 rounded-full text-[11px] font-semibold uppercase tracking-[2px] transition-all duration-300",
+              location.pathname === link.path 
+                ? "text-white bg-white/10" 
+                : "text-white/40 hover:text-white/80"
+            )}
+          >
+            {link.name}
+          </Link>
+        ))}
+      </nav>
     </header>
   );
 };
