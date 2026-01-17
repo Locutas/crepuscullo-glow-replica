@@ -58,9 +58,9 @@ const Setup = () => {
           {/* Hero Section do Setup */}
           <div className="flex flex-col items-center text-center mb-16 page-transition">
             <div className="relative w-40 h-40 mb-6 flex items-center justify-center">
-              {/* Brilho de Fundo Suave (Sem borda circular) */}
-              <div className="absolute w-32 h-32 bg-primary/10 blur-[60px] rounded-full pointer-events-none" />
-              <div className="absolute w-16 h-16 bg-primary/20 blur-[30px] rounded-full pointer-events-none" />
+              {/* Brilho Vermelho Leve (Exclusivo da Setup) */}
+              <div className="absolute w-32 h-32 bg-primary/20 blur-[50px] rounded-full pointer-events-none" />
+              <div className="absolute w-20 h-20 bg-primary/30 blur-[25px] rounded-full pointer-events-none" />
               
               <img 
                 src="https://i.imgur.com/cPvNAwl.png" 
