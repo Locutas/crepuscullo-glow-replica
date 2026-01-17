@@ -6,21 +6,32 @@ import CrosshairCard from '@/components/CrosshairCard';
 import { Layout, Crosshair } from 'lucide-react';
 
 const Valorant = () => {
+  const crosshairImage = "https://i.imgur.com/tQF1xXU.png";
+  
   const crosshairs = [
     {
-      name: "Standard Dot",
+      name: "Mira 1",
       code: "0;P;c;7;h;0;f;0;0l;3;0v;3;0o;2;0a;1;0f;0;1b;0",
-      imageUrl: "https://i.imgur.com/vH9Xq3w.png"
+      imageUrl: crosshairImage,
+      imageClassName: "scale-[200%] object-[0%_0%]" // Top Left
     },
     {
-      name: "Small Cross",
+      name: "Mira 2",
       code: "0;P;h;0;f;0;0l;2;0v;2;0o;2;0a;1;0f;0;1b;0",
-      imageUrl: "https://i.imgur.com/fL8lY3O.png"
+      imageUrl: crosshairImage,
+      imageClassName: "scale-[200%] object-[100%_0%]" // Top Right
     },
     {
-      name: "Box Crosshair",
+      name: "Mira 3",
       code: "0;P;c;1;h;0;f;0;0l;2;0v;2;0o;0;0a;1;0f;0;1b;0",
-      imageUrl: "https://i.imgur.com/S6H1O3O.png"
+      imageUrl: crosshairImage,
+      imageClassName: "scale-[200%] object-[0%_100%]" // Bottom Left
+    },
+    {
+      name: "Mira 4",
+      code: "0;P;c;5;h;0;f;0;0l;4;0v;4;0o;2;0a;1;0f;0;1b;0",
+      imageUrl: crosshairImage,
+      imageClassName: "scale-[200%] object-[100%_100%]" // Bottom Right
     }
   ];
 
@@ -80,13 +91,14 @@ const Valorant = () => {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {crosshairs.map((xhair, index) => (
                 <CrosshairCard 
                   key={index}
                   name={xhair.name}
                   code={xhair.code}
                   imageUrl={xhair.imageUrl}
+                  imageClassName={xhair.imageClassName}
                 />
               ))}
             </div>

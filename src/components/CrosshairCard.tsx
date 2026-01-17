@@ -3,14 +3,16 @@
 import React from 'react';
 import { Copy, Check } from 'lucide-react';
 import { toast } from 'sonner';
+import { cn } from '@/lib/utils';
 
 interface CrosshairProps {
   name: string;
   code: string;
   imageUrl: string;
+  imageClassName?: string;
 }
 
-const CrosshairCard = ({ name, code, imageUrl }: CrosshairProps) => {
+const CrosshairCard = ({ name, code, imageUrl, imageClassName }: CrosshairProps) => {
   const [copied, setCopied] = React.useState(false);
 
   const copyToClipboard = () => {
@@ -27,7 +29,7 @@ const CrosshairCard = ({ name, code, imageUrl }: CrosshairProps) => {
         <img 
           src={imageUrl} 
           alt={`Mira ${name}`}
-          className="w-full h-full object-contain"
+          className={cn("w-full h-full object-cover transition-transform duration-500", imageClassName)}
         />
         <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
