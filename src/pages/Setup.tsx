@@ -92,39 +92,39 @@ const Setup = () => {
                 </h2>
               </div>
 
-              {/* Grid de Itens Mais Compacto na Vertical */}
+              {/* Grid de Itens com efeito suave no card inteiro */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {section.items.map((item, itemIdx) => (
                   <div 
                     key={itemIdx} 
-                    className="bg-[#0f0f0f] border border-white/[0.03] rounded-[16px] p-3 transition-all duration-300 hover:border-white/10 hover:bg-[#121212] group"
+                    className="bg-[#0f0f0f] border border-white/[0.03] rounded-[16px] p-3 transition-all duration-500 ease-out hover:border-primary/20 hover:bg-[#141414] hover:scale-[1.03] hover:shadow-[0_10px_30px_-10px_rgba(255,70,85,0.1)] group"
                   >
-                    {/* Imagem do Produto com Aspect Ratio mais achatado */}
+                    {/* Imagem do Produto */}
                     <div className="aspect-[21/9] bg-black/40 rounded-lg overflow-hidden mb-3 flex items-center justify-center border border-white/[0.02]">
                       {item.image ? (
                         <img 
                           src={item.image} 
                           alt={item.name}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                         />
                       ) : (
-                        <Cpu className="w-6 h-6 text-white/5" />
+                        <Cpu className="w-6 h-6 text-white/5 transition-transform duration-700 group-hover:scale-125" />
                       )}
                     </div>
 
-                    {/* Conteúdo Info Compacto */}
+                    {/* Conteúdo Info */}
                     <div className="space-y-0.5">
                       <div className="flex items-center justify-between gap-2">
-                        <h3 className="text-white text-[13px] font-bold truncate">
+                        <h3 className="text-white text-[13px] font-bold truncate transition-colors duration-300 group-hover:text-primary/90">
                           {item.name}
                         </h3>
                         {item.badge && (
-                          <span className="px-1.5 py-0.5 rounded bg-[#2d1618] text-[#ff4655] text-[8px] font-bold">
+                          <span className="px-1.5 py-0.5 rounded bg-[#2d1618] text-[#ff4655] text-[8px] font-bold shadow-sm">
                             {item.badge}
                           </span>
                         )}
                       </div>
-                      <p className="text-white/30 text-[11px] leading-relaxed line-clamp-1 uppercase tracking-wider">
+                      <p className="text-white/30 text-[11px] leading-relaxed line-clamp-1 uppercase tracking-wider transition-colors duration-300 group-hover:text-white/50">
                         {item.spec}
                       </p>
                     </div>
