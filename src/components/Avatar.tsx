@@ -12,8 +12,8 @@ const Avatar = ({ imageUrl, alt }: AvatarProps) => {
       {/* Brilho ambiental escuro no hover */}
       <div className="absolute inset-0 rounded-full bg-black/40 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       
-      {/* Container do Avatar */}
-      <div className="relative w-full h-full rounded-full overflow-hidden bg-secondary/80 flex items-center justify-center transition-all duration-500 group-hover:shadow-[0_0_40px_rgba(0,0,0,0.9)]">
+      {/* Container do Avatar com borda escura sutil */}
+      <div className="relative w-full h-full rounded-full overflow-hidden bg-secondary/80 flex items-center justify-center border border-black/20 transition-all duration-500 group-hover:shadow-[0_0_40px_rgba(0,0,0,0.9)]">
         <img 
           src={imageUrl} 
           alt={alt}

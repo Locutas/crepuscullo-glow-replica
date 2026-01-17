@@ -13,20 +13,20 @@ const Index = () => {
       <Header />
       
       <main className="relative z-10 pt-32 pb-16 px-6 flex flex-col items-center justify-center min-h-screen">
-        <div className="text-center max-w-xl">
+        <div className="text-center max-w-xl flex flex-col items-center">
           {/* Avatar */}
           <Avatar 
             imageUrl={avatarUrl}
             alt="Crepuscullo Avatar" 
           />
           
-          {/* Nome */}
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 tracking-wider">
+          {/* Nome reduzido */}
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 tracking-wider">
             CREPUSCULLO
           </h1>
 
-          {/* Descrição */}
-          <p className="text-muted-foreground text-lg mb-10 leading-relaxed px-4">
+          {/* Descrição ajustada para duas linhas */}
+          <p className="text-muted-foreground text-lg mb-10 leading-relaxed max-w-[450px]">
             Olá! Sou a Crepuscullo, mas você pode me chamar de Bella. Sou streamer de VALORANT (e às vezes, outros joguinhos legais).
           </p>
           
