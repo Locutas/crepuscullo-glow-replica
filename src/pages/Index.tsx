@@ -23,7 +23,7 @@ const Index = () => {
             CREPUSCULLO
           </h1>
 
-          <p className="text-white/40 text-[13px] mb-10 leading-relaxed max-w-[450px] uppercase tracking-[1px] font-medium line-clamp-2">
+          <p className="text-white/40 text-[13px] mb-10 leading-relaxed max-w-[450px] uppercase tracking-[1px] font-medium">
             Olá! Sou a Crepuscullo, mas você pode me chamar de Bella. Sou streamer de VALORANT (e às vezes, outros joguinhos legais).
           </p>
           
