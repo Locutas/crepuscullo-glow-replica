@@ -10,10 +10,10 @@ interface AvatarProps {
 const Avatar = ({ imageUrl, alt }: AvatarProps) => {
   return (
     <div className="relative w-56 h-56 mx-auto mb-10 flex items-center justify-center">
-      {/* 1. Elemento de Fundo Estático (A borda fixa) */}
-      <div className="absolute w-40 h-40 rounded-full border-2 border-white/10 bg-black/20 backdrop-blur-sm shadow-[0_0_30px_rgba(255,70,85,0.1)] flex items-center justify-center">
+      {/* 1. Elemento de Fundo Estático (A borda fixa vermelha) */}
+      <div className="absolute w-40 h-40 rounded-full border-2 border-primary/40 bg-black/20 backdrop-blur-sm shadow-[0_0_40px_rgba(255,70,85,0.2)] flex items-center justify-center">
         {/* Glow interno da borda */}
-        <div className="absolute inset-0 rounded-full shadow-[inset_0_0_20px_rgba(255,255,255,0.05)]" />
+        <div className="absolute inset-0 rounded-full shadow-[inset_0_0_20px_rgba(255,70,85,0.15)]" />
       </div>
 
       {/* 2. Círculo de Brilho Vermelho (Glow intenso atrás do avatar) */}
