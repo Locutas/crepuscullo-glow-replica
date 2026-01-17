@@ -9,7 +9,7 @@ const ValorantStats = () => {
   const agents: Agent[] = [
     { 
       name: 'Killjoy', 
-      imageUrl: 'https://media.valorant-api.com/agents/1e58de9d-4950-5125-93e9-a0aee9f98746/displayicon.png' 
+      imageUrl: 'https://i.imgur.com/iCbpnsA.png' 
     },
     { 
       name: 'Reyna', 
@@ -43,7 +43,7 @@ const ValorantStats = () => {
           key={index}
           className="bg-white/[0.03] border border-transparent rounded-[16px] p-6 transition-all duration-300 ease-out hover:bg-white/[0.06] hover:border-primary/40 hover:scale-[1.015] group flex flex-col items-center justify-center text-center"
         >
-          <div className="w-20 h-20 mb-4 rounded-full overflow-hidden border-2 border-transparent group-hover:border-primary/50 transition-all duration-300 bg-black/40">
+          <div className="w-20 h-20 mb-4 rounded-full overflow-hidden transition-all duration-300 bg-black/40">
             <img 
               src={agent.imageUrl} 
               alt={agent.name}
