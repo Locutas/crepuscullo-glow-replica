@@ -19,18 +19,15 @@ const Avatar = ({ imageUrl, alt }: AvatarProps) => {
       {/* 2. Círculo de Brilho Vermelho (Glow intenso atrás do avatar) */}
       <div className="absolute w-32 h-32 bg-primary/30 rounded-full blur-[50px] animate-pulse" />
 
-      {/* 3. Avatar Flutuante (O que realmente se move) */}
-      <div className="relative w-44 h-44 animate-float z-10">
-        <div className="w-full h-full rounded-full p-[3px] bg-gradient-to-b from-white/20 to-transparent shadow-2xl overflow-hidden">
+      {/* 3. Avatar Flutuante (Sem borda própria) */}
+      <div className="relative w-44 h-44 animate-float z-10 flex items-center justify-center">
+        <div className="w-40 h-40 rounded-full overflow-hidden">
           <img 
             src={imageUrl} 
             alt={alt}
             className="w-full h-full object-cover rounded-full"
           />
         </div>
-        
-        {/* Reflexo sutil no topo do avatar flutuante */}
-        <div className="absolute top-0 left-1/4 w-1/2 h-4 bg-white/10 blur-md rounded-full pointer-events-none" />
       </div>
 
       {/* 4. Sombra dinâmica projetada na borda de fundo */}
