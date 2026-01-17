@@ -3,32 +3,33 @@ import Header from '@/components/Header';
 import Avatar from '@/components/Avatar';
 import SocialLinks from '@/components/SocialLinks';
 import ValorantStats from '@/components/ValorantStats';
-import FloatingParticles from '@/components/FloatingParticles';
+import FallingPetals from '@/components/FallingPetals';
 import AudioPlayer from '@/components/AudioPlayer';
+import avatarImg from '@/assets/avatar.png';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      <FloatingParticles />
+      <FallingPetals />
       <Header />
       
-      <main className="relative z-10 pt-24 pb-16 px-6">
+      <main className="relative z-10 pt-28 pb-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
           {/* Avatar */}
           <Avatar 
-            imageUrl="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop" 
+            imageUrl={avatarImg}
             alt="Crepuscullo Avatar" 
           />
           
           {/* Name */}
-          <h1 className="text-5xl font-bold text-foreground text-glow mb-2 tracking-tight">
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground text-glow mb-2 tracking-wide">
             CREPUSCULLO
           </h1>
           
           {/* Location */}
-          <div className="flex items-center justify-center gap-1 text-muted-foreground mb-6">
-            <MapPin className="w-4 h-4" />
-            <span className="text-sm">BR</span>
+          <div className="flex items-center justify-center gap-1 text-muted-foreground mb-4">
+            <MapPin className="w-3.5 h-3.5" />
+            <span className="text-sm">SC</span>
           </div>
           
           {/* Social Links */}
