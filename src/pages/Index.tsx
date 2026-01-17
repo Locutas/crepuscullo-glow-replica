@@ -1,4 +1,3 @@
-import { MapPin } from 'lucide-react';
 import Header from '@/components/Header';
 import Avatar from '@/components/Avatar';
 import SocialLinks from '@/components/SocialLinks';
@@ -6,8 +5,7 @@ import FallingPetals from '@/components/FallingPetals';
 import AudioPlayer from '@/components/AudioPlayer';
 
 const Index = () => {
-  // Usando a URL direta fornecida para garantir a atualização imediata
-  const avatarUrl = "https://i.imgur.com/tRPgLbs.jpeg";
+  const avatarUrl = "https://i.imgur.com/DRtX1FY.jpeg";
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
@@ -23,21 +21,13 @@ const Index = () => {
           />
           
           {/* Nome */}
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-3 tracking-wider">
+          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 tracking-wider">
             CREPUSCULLO
           </h1>
-          
-          {/* Location */}
-          <div className="flex items-center justify-center gap-1.5 text-muted-foreground mb-6">
-            <MapPin className="w-4 h-4" />
-            <span className="text-sm">SC</span>
-          </div>
 
-          {/* Descrição Refinada */}
+          {/* Descrição */}
           <p className="text-muted-foreground text-lg mb-10 leading-relaxed px-4">
-            Streamer de VALORANT, criadora de conteúdo e entusiasta de bons jogos. 
-            Entre headshots e risadas, busco construir uma comunidade acolhedora enquanto 
-            compartilho minha jornada competitiva e momentos de pura diversão.
+            Olá! Sou a Crepuscullo, mas você pode me chamar de Bella. Sou streamer de VALORANT (e às vezes, outros joguinhos legais).
           </p>
           
           {/* Social Links */}
