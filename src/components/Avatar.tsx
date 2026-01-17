@@ -10,16 +10,15 @@ interface AvatarProps {
 const Avatar = ({ imageUrl, alt }: AvatarProps) => {
   return (
     <div className="relative w-56 h-56 mx-auto mb-10 flex items-center justify-center">
-      {/* Brilho Ambiental Suave */}
-      <div className="absolute w-40 h-40 bg-primary/10 blur-[60px] rounded-full pointer-events-none" />
-      <div className="absolute w-20 h-20 bg-primary/20 blur-[30px] rounded-full pointer-events-none" />
-
-      {/* Avatar Flutuante (Sem borda circular rígida) */}
-      <div className="relative w-44 h-44 animate-float z-10 flex items-center justify-center">
+      {/* Efeito leve de vermelho em volta (Glow ambiental) */}
+      <div className="absolute w-48 h-48 bg-primary/20 blur-[40px] rounded-full pointer-events-none animate-pulse" />
+      
+      {/* Container Circular com Borda */}
+      <div className="relative w-44 h-44 rounded-full border-2 border-primary/30 p-1 bg-black/20 backdrop-blur-sm overflow-hidden animate-float z-10">
         <img 
           src={imageUrl} 
           alt={alt}
-          className="w-full h-full object-contain"
+          className="w-full h-full object-cover rounded-full"
         />
       </div>
 
