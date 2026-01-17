@@ -97,18 +97,18 @@ const Setup = () => {
                 {section.items.map((item, itemIdx) => (
                   <div 
                     key={itemIdx} 
-                    className="bg-white/[0.03] border border-white/[0.03] rounded-[16px] p-3 transition-all duration-500 ease-out hover:border-primary/20 hover:bg-white/[0.06] hover:scale-[1.03] hover:shadow-[0_10px_30px_-10px_rgba(255,70,85,0.1)] group"
+                    className="bg-white/[0.03] rounded-[16px] p-3 transition-all duration-500 ease-out hover:bg-white/[0.06] hover:scale-[1.015] hover:shadow-[0_10px_30px_-10px_rgba(255,70,85,0.08)] group"
                   >
                     {/* Imagem do Produto */}
-                    <div className="aspect-[21/9] bg-black/40 rounded-lg overflow-hidden mb-3 flex items-center justify-center border border-white/[0.02]">
+                    <div className="aspect-[21/9] bg-black/40 rounded-lg overflow-hidden mb-3 flex items-center justify-center">
                       {item.image ? (
                         <img 
                           src={item.image} 
                           alt={item.name}
-                          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                         />
                       ) : (
-                        <Cpu className="w-6 h-6 text-white/5 transition-transform duration-700 group-hover:scale-125" />
+                        <Cpu className="w-6 h-6 text-white/5 transition-transform duration-700 group-hover:scale-110" />
                       )}
                     </div>
 
