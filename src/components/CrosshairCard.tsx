@@ -23,12 +23,14 @@ const CrosshairCard = ({ name, code, imageUrl }: CrosshairProps) => {
 
   return (
     <div className="bg-white/[0.03] border border-transparent rounded-[12px] p-3 transition-all duration-300 ease-out hover:bg-white/[0.06] hover:border-primary/40 group flex flex-col h-full">
-      <div className="aspect-[4/3] bg-black/40 rounded-lg overflow-hidden mb-3 flex items-center justify-center relative p-2">
-        <img 
-          src={imageUrl} 
-          alt={`Mira ${name}`}
-          className="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-110"
-        />
+      <div className="aspect-square bg-black/40 rounded-lg overflow-hidden mb-3 flex items-center justify-center relative p-1">
+        <div className="w-full h-full flex items-center justify-center">
+          <img 
+            src={imageUrl} 
+            alt={`Mira ${name}`}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+        </div>
         <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
