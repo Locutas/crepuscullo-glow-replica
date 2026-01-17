@@ -16,7 +16,7 @@ const Setup = () => {
   const setupSections = [
     {
       category: "MONITORES",
-      icon: <Monitor className="w-6 h-6" />,
+      icon: <Monitor className="w-5 h-5" />,
       items: [
         { name: "Monitor Principal", spec: "AOC Agon 25G3ZM/BK25", badge: "240Hz", image: monitorPrincipal },
         { name: "Monitor Secundário", spec: "Samsung Odyssey G3 27 G30A", badge: "180Hz", image: monitorSecundario }
@@ -24,7 +24,7 @@ const Setup = () => {
     },
     {
       category: "ÁUDIO",
-      icon: <Headphones className="w-6 h-6" />,
+      icon: <Headphones className="w-5 h-5" />,
       items: [
         { name: "Headset", spec: "HyperX Cloud Alpha S", image: headsetImg },
         { name: "Fone de ouvido", spec: "KZ ZS10 Pro", image: foneImg },
@@ -33,7 +33,7 @@ const Setup = () => {
     },
     {
       category: "PERIFÉRICOS",
-      icon: <Keyboard className="w-6 h-6" />,
+      icon: <Keyboard className="w-5 h-5" />,
       items: [
         { name: "Teclado", spec: "HyperX Alloy Origins 60", image: tecladoImg },
         { name: "Mouse", spec: "Attack Shark X3", image: mouseImg }
@@ -41,7 +41,7 @@ const Setup = () => {
     },
     {
       category: "HARDWARE",
-      icon: <Cpu className="w-6 h-6" />,
+      icon: <Cpu className="w-5 h-5" />,
       items: [
         { name: "Processador", spec: "Ryzen 7800X3D" },
         { name: "Placa de Vídeo", spec: "Nvidia GeForce RTX 3050" },
@@ -56,32 +56,32 @@ const Setup = () => {
       <FallingPetals />
       <Header />
       
-      <main className="relative z-10 pt-40 pb-32 px-6">
-        <div className="max-w-6xl mx-auto space-y-10">
+      <main className="relative z-10 pt-32 pb-24 px-6">
+        <div className="max-w-5xl mx-auto space-y-8">
           {setupSections.map((section, idx) => (
             <div 
               key={idx} 
-              className="bg-[#080808] border border-white/[0.05] rounded-[24px] p-8 md:p-10 page-transition"
+              className="bg-[#080808] border border-white/[0.05] rounded-[20px] p-6 md:p-8 page-transition"
             >
-              {/* Header da Seção */}
-              <div className="flex items-center gap-4 mb-10">
-                <div className="text-white">
+              {/* Header da Seção Reduzido */}
+              <div className="flex items-center gap-3 mb-8">
+                <div className="text-white/80">
                   {section.icon}
                 </div>
-                <h2 className="text-xl font-bold text-white tracking-wider">
+                <h2 className="text-lg font-bold text-white tracking-widest">
                   {section.category}
                 </h2>
               </div>
 
-              {/* Grid de Itens */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Grid de Itens Mais Compacto */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {section.items.map((item, itemIdx) => (
                   <div 
                     key={itemIdx} 
-                    className="bg-[#0f0f0f] border border-white/[0.03] rounded-[20px] p-5 transition-all duration-300 hover:border-white/10 hover:bg-[#121212]"
+                    className="bg-[#0f0f0f] border border-white/[0.03] rounded-[16px] p-4 transition-all duration-300 hover:border-white/10 hover:bg-[#121212] group"
                   >
-                    {/* Imagem do Produto (Proporção da imagem enviada) */}
-                    <div className="aspect-[16/9] bg-black/40 rounded-xl overflow-hidden mb-5 flex items-center justify-center border border-white/[0.02]">
+                    {/* Imagem do Produto Menor */}
+                    <div className="aspect-[16/9] bg-black/40 rounded-lg overflow-hidden mb-4 flex items-center justify-center border border-white/[0.02]">
                       {item.image ? (
                         <img 
                           src={item.image} 
@@ -89,23 +89,23 @@ const Setup = () => {
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                       ) : (
-                        <Cpu className="w-10 h-10 text-white/5" />
+                        <Cpu className="w-8 h-8 text-white/5" />
                       )}
                     </div>
 
-                    {/* Conteúdo Info */}
-                    <div className="space-y-1.5">
+                    {/* Conteúdo Info Reduzido */}
+                    <div className="space-y-1">
                       <div className="flex items-center justify-between gap-2">
-                        <h3 className="text-white text-[15px] font-bold truncate">
+                        <h3 className="text-white text-[14px] font-bold truncate">
                           {item.name}
                         </h3>
                         {item.badge && (
-                          <span className="px-2 py-0.5 rounded-md bg-[#2d1618] text-[#ff4655] text-[10px] font-bold">
+                          <span className="px-1.5 py-0.5 rounded bg-[#2d1618] text-[#ff4655] text-[9px] font-bold">
                             {item.badge}
                           </span>
                         )}
                       </div>
-                      <p className="text-white/40 text-[13px] leading-relaxed">
+                      <p className="text-white/30 text-[12px] leading-relaxed line-clamp-1">
                         {item.spec}
                       </p>
                     </div>
