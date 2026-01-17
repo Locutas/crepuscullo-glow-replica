@@ -28,8 +28,8 @@ const Setup = () => {
       category: "PERIFÉRICOS",
       icon: <Keyboard className="w-5 h-5" />,
       items: [
-        { name: "Teclado", spec: "Royal Kludge R75", image: "https://i.imgur.com/6OlkGxe.png" },
         { name: "Mouse", spec: "Dareu Sakura EM90X1", image: "https://i.imgur.com/izc86RZ.png" },
+        { name: "Teclado", spec: "Royal Kludge R75", image: "https://i.imgur.com/6OlkGxe.png" },
         { name: "Webcam", spec: "Logitech C920s", image: "https://i.imgur.com/MMezS2q.png" }
       ]
     },
