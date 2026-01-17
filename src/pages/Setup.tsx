@@ -80,7 +80,7 @@ const Setup = () => {
           {setupSections.map((section, idx) => (
             <div 
               key={idx} 
-              className="bg-white/[0.02] backdrop-blur-md border border-white/[0.05] rounded-[24px] p-6 md:p-8 page-transition"
+              className="bg-white/[0.02] backdrop-blur-md rounded-[24px] p-6 md:p-8 page-transition"
             >
               {/* Header da Seção */}
               <div className="flex items-center gap-3 mb-6">
