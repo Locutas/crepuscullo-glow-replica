@@ -80,7 +80,7 @@ const Setup = () => {
           {setupSections.map((section, idx) => (
             <div 
               key={idx} 
-              className="bg-[#080808] border border-white/[0.05] rounded-[20px] p-6 md:p-8 page-transition"
+              className="bg-white/[0.02] backdrop-blur-md border border-white/[0.05] rounded-[24px] p-6 md:p-8 page-transition"
             >
               {/* Header da Seção */}
               <div className="flex items-center gap-3 mb-6">
@@ -97,7 +97,7 @@ const Setup = () => {
                 {section.items.map((item, itemIdx) => (
                   <div 
                     key={itemIdx} 
-                    className="bg-[#0f0f0f] border border-white/[0.03] rounded-[16px] p-3 transition-all duration-500 ease-out hover:border-primary/20 hover:bg-[#141414] hover:scale-[1.03] hover:shadow-[0_10px_30px_-10px_rgba(255,70,85,0.1)] group"
+                    className="bg-white/[0.03] border border-white/[0.03] rounded-[16px] p-3 transition-all duration-500 ease-out hover:border-primary/20 hover:bg-white/[0.06] hover:scale-[1.03] hover:shadow-[0_10px_30px_-10px_rgba(255,70,85,0.1)] group"
                   >
                     {/* Imagem do Produto */}
                     <div className="aspect-[21/9] bg-black/40 rounded-lg overflow-hidden mb-3 flex items-center justify-center border border-white/[0.02]">
