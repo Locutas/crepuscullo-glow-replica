@@ -20,18 +20,18 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className="flex items-center justify-center gap-3 mt-6">
+    <div className="flex items-center justify-center gap-4">
       {socialLinks.map((link, index) => (
         <a
           key={index}
           href={link.url}
           aria-label={link.label}
-          className="w-11 h-11 rounded-full bg-secondary/60 border border-border/50 flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 transition-all duration-300"
+          className="w-12 h-12 rounded-full bg-secondary border border-border flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 transition-all duration-300"
         >
           <img 
             src={link.icon} 
             alt={link.label}
-            className="w-5 h-5 object-contain opacity-70 hover:opacity-100 transition-opacity"
+            className="w-5 h-5 object-contain"
           />
         </a>
       ))}

@@ -11,12 +11,10 @@ const FallingPetals = () => {
       const petal = document.createElement('div');
       petal.className = 'petal';
       petal.style.left = Math.random() * 100 + '%';
-      petal.style.animationDuration = Math.random() * 5 + 8 + 's';
-      petal.style.animationDelay = Math.random() * 2 + 's';
-      petal.style.opacity = (Math.random() * 0.4 + 0.1).toString();
+      petal.style.animationDuration = `${Math.random() * 8 + 10}s, ${Math.random() * 2 + 2}s`;
+      petal.style.animationDelay = `${Math.random() * 5}s, 0s`;
       
-      // Random size
-      const size = Math.random() * 8 + 4;
+      const size = Math.random() * 6 + 4;
       petal.style.width = size + 'px';
       petal.style.height = size + 'px';
       
@@ -24,16 +22,16 @@ const FallingPetals = () => {
 
       setTimeout(() => {
         petal.remove();
-      }, 15000);
+      }, 20000);
     };
 
     // Create initial petals
-    for (let i = 0; i < 30; i++) {
-      setTimeout(createPetal, i * 300);
+    for (let i = 0; i < 40; i++) {
+      setTimeout(createPetal, i * 200);
     }
 
     // Continue creating petals
-    const interval = setInterval(createPetal, 500);
+    const interval = setInterval(createPetal, 400);
 
     return () => {
       clearInterval(interval);

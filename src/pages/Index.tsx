@@ -13,8 +13,8 @@ const Index = () => {
       <FallingPetals />
       <Header />
       
-      <main className="relative z-10 pt-28 pb-16 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      <main className="relative z-10 pt-32 pb-16 px-6 flex flex-col items-center justify-center min-h-screen">
+        <div className="text-center">
           {/* Avatar */}
           <Avatar 
             imageUrl={avatarImg}
@@ -22,13 +22,13 @@ const Index = () => {
           />
           
           {/* Name */}
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground text-glow mb-2 tracking-wide">
+          <h1 className="text-5xl md:text-6xl font-bold text-foreground text-glow mb-3 tracking-wider">
             CREPUSCULLO
           </h1>
           
           {/* Location */}
-          <div className="flex items-center justify-center gap-1 text-muted-foreground mb-4">
-            <MapPin className="w-3.5 h-3.5" />
+          <div className="flex items-center justify-center gap-1.5 text-muted-foreground mb-6">
+            <MapPin className="w-4 h-4" />
             <span className="text-sm">SC</span>
           </div>
           
