@@ -12,7 +12,7 @@ const Index = () => {
       <FallingPetals />
       <Header />
       
-      <main className="relative z-10 pt-32 pb-16 px-6 flex flex-col items-center justify-center min-h-screen">
+      <main className="relative z-10 pt-32 pb-16 px-6 flex flex-col items-center justify-center min-h-screen page-transition">
         <div className="text-center max-w-3xl flex flex-col items-center scale-105 md:scale-115">
           <Avatar 
             imageUrl={avatarUrl}
