@@ -2,9 +2,28 @@ import Header from '@/components/Header';
 import FallingPetals from '@/components/FallingPetals';
 import AudioPlayer from '@/components/AudioPlayer';
 import ValorantStats from '@/components/ValorantStats';
-import { Layout } from 'lucide-react';
+import CrosshairCard from '@/components/CrosshairCard';
+import { Layout, Crosshair } from 'lucide-react';
 
 const Valorant = () => {
+  const crosshairs = [
+    {
+      name: "Standard Dot",
+      code: "0;P;c;7;h;0;f;0;0l;3;0v;3;0o;2;0a;1;0f;0;1b;0",
+      imageUrl: "https://i.imgur.com/vH9Xq3w.png"
+    },
+    {
+      name: "Small Cross",
+      code: "0;P;h;0;f;0;0l;2;0v;2;0o;2;0a;1;0f;0;1b;0",
+      imageUrl: "https://i.imgur.com/fL8lY3O.png"
+    },
+    {
+      name: "Box Crosshair",
+      code: "0;P;c;1;h;0;f;0;0l;2;0v;2;0o;0;0a;1;0f;0;1b;0",
+      imageUrl: "https://i.imgur.com/S6H1O3O.png"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
       <FallingPetals />
@@ -36,18 +55,41 @@ const Valorant = () => {
             </p>
           </div>
 
-          {/* Stats Section - Seguindo o padrão visual do Setup */}
+          {/* Status Section */}
           <div className="bg-white/[0.02] backdrop-blur-md rounded-[24px] p-6 md:p-8 page-transition">
             <div className="flex items-center gap-3 mb-8">
               <div className="text-white/80">
                 <Layout className="w-5 h-5" />
               </div>
               <h2 className="text-lg font-bold text-white tracking-widest uppercase">
-                ESTATÍSTICAS & MAIN AGENTS
+                STATUS
               </h2>
             </div>
 
             <ValorantStats />
+          </div>
+
+          {/* Miras Section */}
+          <div className="bg-white/[0.02] backdrop-blur-md rounded-[24px] p-6 md:p-8 page-transition">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="text-white/80">
+                <Crosshair className="w-5 h-5" />
+              </div>
+              <h2 className="text-lg font-bold text-white tracking-widest uppercase">
+                MIRAS
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {crosshairs.map((xhair, index) => (
+                <CrosshairCard 
+                  key={index}
+                  name={xhair.name}
+                  code={xhair.code}
+                  imageUrl={xhair.imageUrl}
+                />
+              ))}
+            </div>
           </div>
 
         </div>

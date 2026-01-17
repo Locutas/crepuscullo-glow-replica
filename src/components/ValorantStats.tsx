@@ -1,4 +1,3 @@
-import valorantLogo from '@/assets/valorant-logo.png';
 import rankDiamond from '@/assets/rank-diamond.png';
 
 interface Agent {
@@ -23,7 +22,7 @@ const ValorantStats = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
       {/* Peak Rate Item */}
       <div className="bg-white/[0.03] border border-transparent rounded-[16px] p-6 transition-all duration-300 ease-out hover:bg-white/[0.06] hover:border-primary/40 hover:scale-[1.015] group flex flex-col items-center justify-center text-center">
         <div className="w-20 h-20 mb-4 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
@@ -33,14 +32,9 @@ const ValorantStats = () => {
             className="w-16 h-16 object-contain glow-red"
           />
         </div>
-        <div className="space-y-1">
-          <h3 className="text-white text-[13px] font-bold uppercase tracking-widest transition-colors duration-300 group-hover:text-primary/90">
-            Peak Rank
-          </h3>
-          <p className="text-white/30 text-[10px] uppercase tracking-widest transition-colors duration-300 group-hover:text-white/50">
-            Diamante 1
-          </p>
-        </div>
+        <h3 className="text-white text-[13px] font-bold uppercase tracking-widest transition-colors duration-300 group-hover:text-primary/90">
+          Peak Rank
+        </h3>
       </div>
 
       {/* Agents Items */}
@@ -56,14 +50,9 @@ const ValorantStats = () => {
               className="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all"
             />
           </div>
-          <div className="space-y-1">
-            <h3 className="text-white text-[13px] font-bold uppercase tracking-widest transition-colors duration-300 group-hover:text-primary/90">
-              {agent.name}
-            </h3>
-            <p className="text-white/30 text-[10px] uppercase tracking-widest transition-colors duration-300 group-hover:text-white/50">
-              Main Agent
-            </p>
-          </div>
+          <h3 className="text-white text-[13px] font-bold uppercase tracking-widest transition-colors duration-300 group-hover:text-primary/90">
+            {agent.name}
+          </h3>
         </div>
       ))}
     </div>
