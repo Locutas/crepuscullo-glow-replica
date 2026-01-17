@@ -35,6 +35,16 @@
   font-family: 'Space Grotesk', sans-serif;
 }
 
+/* Brilho do Texto da Logo */
+.text-glow {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.2), 0 0 40px rgba(255, 70, 85, 0.2);
+}
+
+/* Brilho Vermelho para Ícones/Ranks */
+.glow-red {
+  filter: drop-shadow(0 0 8px rgba(255, 70, 85, 0.6));
+}
+
 @keyframes fall {
   0% { transform: translateY(-50px) rotate(0deg) translateX(0); opacity: 0; }
   10% { opacity: 0.8; }
