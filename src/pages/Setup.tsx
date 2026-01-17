@@ -1,4 +1,4 @@
-import { Monitor, Headphones, Keyboard, Cpu } from 'lucide-react';
+import { Monitor, Headphones, Keyboard, Cpu, HardDrive, Layout } from 'lucide-react';
 import Header from '@/components/Header';
 import FallingPetals from '@/components/FallingPetals';
 import AudioPlayer from '@/components/AudioPlayer';
@@ -36,11 +36,13 @@ const Setup = () => {
     {
       category: "HARDWARE",
       icon: <Cpu className="w-5 h-5" />,
+      noImage: true,
       items: [
-        { name: "Processador", spec: "Ryzen 7800X3D" },
-        { name: "Placa de Vídeo", spec: "Nvidia GeForce RTX 3050" },
-        { name: "Placa Mãe", spec: "ASUS TUF B650-M Plus" },
-        { name: "Memória RAM", spec: "Kings Fury Beast 32gb (2x16) 5400Mhz DDR5" }
+        { name: "Processador", spec: "AMD Ryzen 5 5500" },
+        { name: "Placa de Vídeo", spec: "NVIDIA GeForce GTX 1660 Super" },
+        { name: "Memória RAM", spec: "16 GB" },
+        { name: "Armazenamento", spec: "SSD 480 GB / HD 465 GB" },
+        { name: "Placa Mãe", spec: "Sei lá kkk" }
       ]
     }
   ];
@@ -93,19 +95,21 @@ const Setup = () => {
                 {section.items.map((item, itemIdx) => (
                   <div 
                     key={itemIdx} 
-                    className="bg-white/[0.03] border border-transparent rounded-[16px] p-3 transition-all duration-300 ease-out hover:bg-white/[0.06] hover:border-primary/40 hover:scale-[1.015] group"
+                    className="bg-white/[0.03] border border-transparent rounded-[16px] p-4 transition-all duration-300 ease-out hover:bg-white/[0.06] hover:border-primary/40 hover:scale-[1.015] group"
                   >
-                    <div className="aspect-[21/9] bg-black/40 rounded-lg overflow-hidden mb-3 flex items-center justify-center">
-                      {item.image ? (
-                        <img 
-                          src={item.image} 
-                          alt={item.name}
-                          className="w-full h-full object-cover"
-                        />
-                      ) : (
-                        <Cpu className="w-6 h-6 text-white/5" />
-                      )}
-                    </div>
+                    {!section.noImage && (
+                      <div className="aspect-[21/9] bg-black/40 rounded-lg overflow-hidden mb-3 flex items-center justify-center">
+                        {item.image ? (
+                          <img 
+                            src={item.image} 
+                            alt={item.name}
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <Cpu className="w-6 h-6 text-white/5" />
+                        )}
+                      </div>
+                    )}
 
                     <div className="space-y-0.5">
                       <div className="flex items-center justify-between gap-2">
@@ -118,7 +122,7 @@ const Setup = () => {
                           </span>
                         )}
                       </div>
-                      <p className="text-white/30 text-[11px] leading-relaxed line-clamp-1 uppercase tracking-wider transition-colors duration-300 group-hover:text-white/50">
+                      <p className="text-white/30 text-[11px] leading-relaxed line-clamp-2 uppercase tracking-wider transition-colors duration-300 group-hover:text-white/50">
                         {item.spec}
                       </p>
                     </div>
