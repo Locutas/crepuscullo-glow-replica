@@ -10,10 +10,10 @@ interface AvatarProps {
 const Avatar = ({ imageUrl, alt }: AvatarProps) => {
   return (
     <div className="relative w-56 h-56 mx-auto mb-10 flex items-center justify-center">
-      {/* 1. Elemento de Fundo Estático (A borda fixa vermelha) */}
-      <div className="absolute w-40 h-40 rounded-full border-2 border-primary/40 bg-black/20 backdrop-blur-sm shadow-[0_0_40px_rgba(255,70,85,0.1)] flex items-center justify-center">
-        {/* Glow interno da borda mais sutil */}
-        <div className="absolute inset-0 rounded-full shadow-[inset_0_0_20px_rgba(255,70,85,0.1)]" />
+      {/* 1. Elemento de Fundo Estático (A borda fixa com brilho) */}
+      <div className="absolute w-40 h-40 rounded-full border-2 border-primary/60 bg-black/20 backdrop-blur-sm shadow-[0_0_50px_rgba(255,70,85,0.3)] flex items-center justify-center">
+        {/* Glow interno da borda */}
+        <div className="absolute inset-0 rounded-full shadow-[inset_0_0_20px_rgba(255,70,85,0.2)]" />
       </div>
 
       {/* 2. Avatar Flutuante (Sem borda própria) */}
