@@ -11,39 +11,29 @@ const FallingPetals = () => {
       const petal = document.createElement('div');
       petal.className = 'petal';
       
-      const startX = Math.random() * 110 - 5; // Start from -5% to 105% width
+      const startX = Math.random() * 110 - 5;
       petal.style.left = startX + '%';
       
-      // Speed variation (faster like the reference site)
-      const duration = Math.random() * 5 + 6; // 6s to 11s
+      // Velocidade reduzida: de 10s a 18s
+      const duration = Math.random() * 8 + 10;
       petal.style.animationDuration = `${duration}s`;
       
-      // Size variation
-      const size = Math.random() * 8 + 6; // 6px to 14px
+      const size = Math.random() * 8 + 6;
       petal.style.width = size + 'px';
       petal.style.height = size + 'px';
       
-      // Random rotation
       petal.style.transform = `rotate(${Math.random() * 360}deg)`;
-      
-      // Opacity variation
-      petal.style.opacity = (Math.random() * 0.4 + 0.4).toString();
+      petal.style.opacity = (Math.random() * 0.4 + 0.3).toString();
 
       container.appendChild(petal);
 
-      // Remove after animation finishes
       setTimeout(() => {
         petal.remove();
       }, duration * 1000);
     };
 
-    // Initial burst
-    for (let i = 0; i < 50; i++) {
-      setTimeout(createPetal, Math.random() * 3000);
-    }
-
-    // High frequency generation to match density
-    const interval = setInterval(createPetal, 150);
+    // Intervalo de geração mais lento para combinar com a velocidade
+    const interval = setInterval(createPetal, 250);
 
     return () => {
       clearInterval(interval);

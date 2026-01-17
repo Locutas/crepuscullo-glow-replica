@@ -26,12 +26,12 @@ const SocialLinks = () => {
           key={index}
           href={link.url}
           aria-label={link.label}
-          className="w-12 h-12 rounded-full bg-secondary border border-border flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 transition-all duration-300"
+          className="w-12 h-12 rounded-full bg-secondary/50 border border-white/5 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-primary/20 hover:border-primary/50 group"
         >
           <img 
             src={link.icon} 
             alt={link.label}
-            className="w-5 h-5 object-contain"
+            className="w-5 h-5 object-contain transition-transform group-hover:scale-110"
           />
         </a>
       ))}

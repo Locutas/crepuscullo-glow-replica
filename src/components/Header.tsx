@@ -11,25 +11,35 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
-      <nav className="mx-auto max-w-fit mt-6 px-8 py-3 bg-black/40 backdrop-blur-md border border-white/5 rounded-full">
-        <div className="flex items-center gap-10">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/5">
+      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        {/* Logo/Name Placeholder */}
+        <Link to="/" className="text-xl font-bold tracking-tighter text-foreground hover:text-primary transition-colors">
+          CREPUSCULLO
+        </Link>
+
+        {/* Navigation */}
+        <nav className="flex items-center gap-8">
           {links.map((link) => (
             <Link 
               key={link.path}
               to={link.path}
               className={cn(
-                "text-[13px] font-semibold uppercase tracking-[2px] transition-all duration-300 hover:text-primary",
+                "text-sm font-medium transition-all duration-300 relative group",
                 location.pathname === link.path 
-                  ? "text-primary drop-shadow-[0_0_8px_rgba(255,70,85,0.5)]" 
-                  : "text-white/60"
+                  ? "text-primary" 
+                  : "text-white/70 hover:text-foreground"
               )}
             >
               {link.name}
+              <span className={cn(
+                "absolute -bottom-1 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full",
+                location.pathname === link.path ? "w-full" : "w-0"
+              )} />
             </Link>
           ))}
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
   );
 };

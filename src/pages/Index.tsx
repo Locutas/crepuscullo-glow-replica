@@ -15,14 +15,14 @@ const Index = () => {
       
       <main className="relative z-10 pt-32 pb-16 px-6 flex flex-col items-center justify-center min-h-screen">
         <div className="text-center">
-          {/* Avatar */}
+          {/* Avatar sem brilho */}
           <Avatar 
             imageUrl={avatarImg}
             alt="Crepuscullo Avatar" 
           />
           
-          {/* Name */}
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground text-glow mb-3 tracking-wider">
+          {/* Nome sem text-glow */}
+          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-3 tracking-wider">
             CREPUSCULLO
           </h1>
           
@@ -32,7 +32,7 @@ const Index = () => {
             <span className="text-sm">SC</span>
           </div>
           
-          {/* Social Links */}
+          {/* Social Links atualizados */}
           <SocialLinks />
           
           {/* Valorant Stats */}
