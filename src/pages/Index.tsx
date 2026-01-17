@@ -4,9 +4,11 @@ import Avatar from '@/components/Avatar';
 import SocialLinks from '@/components/SocialLinks';
 import FallingPetals from '@/components/FallingPetals';
 import AudioPlayer from '@/components/AudioPlayer';
-import avatarImg from '@/assets/avatar.png';
 
 const Index = () => {
+  // Usando a URL direta fornecida para garantir a atualização imediata
+  const avatarUrl = "https://i.imgur.com/tRPgLbs.jpeg";
+
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
       <FallingPetals />
@@ -16,7 +18,7 @@ const Index = () => {
         <div className="text-center max-w-xl">
           {/* Avatar */}
           <Avatar 
-            imageUrl={avatarImg}
+            imageUrl={avatarUrl}
             alt="Crepuscullo Avatar" 
           />
           
@@ -31,9 +33,11 @@ const Index = () => {
             <span className="text-sm">SC</span>
           </div>
 
-          {/* Descrição */}
+          {/* Descrição Refinada */}
           <p className="text-muted-foreground text-lg mb-10 leading-relaxed px-4">
-            Olá! Sou a Crepuscullo, sou streamer de valorant (e às vezes, outros joguinhos legais).
+            Streamer de VALORANT, criadora de conteúdo e entusiasta de bons jogos. 
+            Entre headshots e risadas, busco construir uma comunidade acolhedora enquanto 
+            compartilho minha jornada competitiva e momentos de pura diversão.
           </p>
           
           {/* Social Links */}
